@@ -19,13 +19,12 @@
       --frenzy-gold:     #eca035;
       --bloodshed-red:   #e74c3c;
       --industrial-iron: #34495e;
+      --beat-duration:   428ms;
     }
 
     /* ─── BASE ───────────────────────────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     html { scroll-behavior: smooth; }
-
     body {
       background-color: var(--void-black);
       color: var(--chrome-white);
@@ -42,25 +41,18 @@
       pointer-events: none;
       z-index: 9999;
       background: repeating-linear-gradient(
-        0deg,
-        transparent,
-        transparent 2px,
-        rgba(0,0,0,0.18) 2px,
-        rgba(0,0,0,0.18) 4px
+        0deg, transparent, transparent 2px,
+        rgba(0,0,0,0.18) 2px, rgba(0,0,0,0.18) 4px
       );
     }
 
     /* ─── TYPOGRAPHY ─────────────────────────────────────── */
-    .font-teko   { font-family: 'Teko', sans-serif; }
-    .font-mono   { font-family: 'Space Mono', monospace; }
+    .font-teko { font-family: 'Teko', sans-serif; }
+    .font-mono { font-family: 'Space Mono', monospace; }
 
     /* ─── GLITCH HEADERS ─────────────────────────────────── */
-    .glitch {
-      position: relative;
-      display: inline-block;
-    }
-    .glitch::before,
-    .glitch::after {
+    .glitch { position: relative; display: inline-block; }
+    .glitch::before, .glitch::after {
       content: attr(data-text);
       position: absolute;
       top: 0; left: 0;
@@ -115,13 +107,8 @@
       border: none;
       outline: none;
     }
-    .btn-primary:hover {
-      filter: brightness(1.2);
-      transform: translateY(-2px);
-    }
-    .btn-primary:active {
-      transform: translateY(1px);
-    }
+    .btn-primary:hover { filter: brightness(1.2); transform: translateY(-2px); }
+    .btn-primary:active { transform: translateY(1px); }
 
     /* ─── NAV ────────────────────────────────────────────── */
     #main-nav {
@@ -148,11 +135,7 @@
       letter-spacing: 0.08em;
       text-shadow: 0 0 12px var(--toxic-volt);
     }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-    }
+    .nav-links { display: flex; align-items: center; gap: 1.5rem; }
     .nav-links a {
       font-family: 'Teko', sans-serif;
       font-weight: 700;
@@ -216,6 +199,15 @@
       border: 3px solid var(--toxic-volt);
       box-shadow: 0 0 18px rgba(92,225,230,0.3);
       display: block;
+      margin: 0 auto 0.3rem;
+    }
+    #oscilloscopeCanvas {
+      width: 400px;
+      max-width: 90vw;
+      height: 50px;
+      background: #000;
+      border: 2px solid #2a2a2a;
+      display: block;
       margin: 0 auto 1.2rem;
     }
 
@@ -257,18 +249,8 @@
       color: #fff;
       box-shadow: 0 0 18px var(--bloodshed-red);
     }
-    .btn-random {
-      background: var(--frenzy-gold);
-      color: #000;
-      font-size: 1rem;
-      padding: 0.5rem 1.2rem;
-    }
-    .btn-clear {
-      background: var(--bloodshed-red);
-      color: #fff;
-      font-size: 1rem;
-      padding: 0.5rem 1.2rem;
-    }
+    .btn-random { background: var(--frenzy-gold); color: #000; font-size: 1rem; padding: 0.5rem 1.2rem; }
+    .btn-clear  { background: var(--bloodshed-red); color: #fff; font-size: 1rem; padding: 0.5rem 1.2rem; }
     .display-chip {
       font-family: 'Space Mono', monospace;
       font-size: 0.72rem;
@@ -287,11 +269,7 @@
       align-items: flex-end;
       margin-bottom: 1rem;
     }
-    .ctrl-group {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-    }
+    .ctrl-group { display: flex; flex-direction: column; gap: 4px; }
     .ctrl-label {
       font-family: 'Space Mono', monospace;
       font-size: 0.62rem;
@@ -299,11 +277,7 @@
       text-transform: uppercase;
       letter-spacing: 0.1em;
     }
-    .ctrl-row {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-    }
+    .ctrl-row { display: flex; align-items: center; gap: 0.5rem; }
     input[type=range] {
       -webkit-appearance: none;
       appearance: none;
@@ -315,8 +289,7 @@
     }
     input[type=range]::-webkit-slider-thumb {
       -webkit-appearance: none;
-      width: 14px;
-      height: 14px;
+      width: 14px; height: 14px;
       border-radius: 50%;
       background: var(--toxic-volt);
       cursor: pointer;
@@ -354,21 +327,18 @@
       font-family: 'Teko', sans-serif;
       font-weight: 700;
       font-style: italic;
-      font-size: 1rem;
+      font-size: 0.88rem;
       text-transform: uppercase;
       background: #1a1a1a;
       color: var(--chrome-white);
       border: 2px solid #444;
-      padding: 4px 18px;
+      padding: 4px 14px;
       cursor: pointer;
       clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
       transition: all 0.15s;
       letter-spacing: 0.05em;
     }
-    .bank-btn:hover {
-      border-color: var(--toxic-volt);
-      color: var(--toxic-volt);
-    }
+    .bank-btn:hover { border-color: var(--toxic-volt); color: var(--toxic-volt); }
     .bank-btn.active {
       background: var(--toxic-volt);
       color: #000;
@@ -407,18 +377,14 @@
       border-color: var(--frenzy-gold);
       box-shadow: 0 0 10px var(--frenzy-gold);
     }
+    .btn-fx:hover { border-color: #888; color: #ccc; }
 
     /* ─── SEQUENCER GRID ─────────────────────────────────── */
-    .seq-grid-wrap {
-      overflow-x: auto;
-      padding-bottom: 0.5rem;
-    }
-    .seq-grid-inner {
-      min-width: 760px;
-    }
+    .seq-grid-wrap { overflow-x: auto; padding-bottom: 0.5rem; }
+    .seq-grid-inner { min-width: 800px; }
     .channel-row {
       display: grid;
-      grid-template-columns: 192px repeat(16, 1fr);
+      grid-template-columns: 220px repeat(16, 1fr);
       gap: 3px;
       margin-bottom: 3px;
       align-items: center;
@@ -426,7 +392,7 @@
     .channel-label {
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       padding: 4px 8px;
       border-left: 4px solid #fff;
       background: #111;
@@ -436,7 +402,7 @@
       font-family: 'Teko', sans-serif;
       font-weight: 700;
       font-style: italic;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       flex: 1;
@@ -446,13 +412,13 @@
     }
     .btn-mute, .btn-solo {
       font-family: 'Space Mono', monospace;
-      font-size: 0.52rem;
+      font-size: 0.5rem;
       font-weight: 700;
       text-transform: uppercase;
       border: 1px solid #444;
       background: #1a1a1a;
       color: #666;
-      padding: 2px 5px;
+      padding: 2px 4px;
       cursor: pointer;
       transition: all 0.12s;
       white-space: nowrap;
@@ -461,6 +427,33 @@
     .btn-mute.muted { background: var(--bloodshed-red); color: #fff; border-color: var(--bloodshed-red); }
     .btn-solo:hover { border-color: var(--frenzy-gold); color: var(--frenzy-gold); }
     .btn-solo.soloed { background: var(--frenzy-gold); color: #000; border-color: var(--frenzy-gold); }
+
+    /* Pitch slider per channel */
+    .pitch-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+      flex-shrink: 0;
+    }
+    .pitch-wrap .pitch-val {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.38rem;
+      color: #555;
+      text-align: center;
+      width: 24px;
+      line-height: 1;
+    }
+    .pitch-wrap input[type=range] {
+      width: 36px;
+      height: 3px;
+      background: #2a2a2a;
+    }
+    .pitch-wrap input[type=range]::-webkit-slider-thumb {
+      width: 10px; height: 10px;
+      background: #555;
+      box-shadow: none;
+    }
 
     /* Step buttons */
     .step-btn {
@@ -488,12 +481,12 @@
     }
 
     /* Channel-specific active colours */
-    .row-kick    .step-btn.active { background: var(--toxic-volt);   box-shadow: 0 0 10px var(--toxic-volt);   border-color: var(--toxic-volt); }
+    .row-kick    .step-btn.active { background: var(--toxic-volt);    box-shadow: 0 0 10px var(--toxic-volt);    border-color: var(--toxic-volt); }
     .row-clap    .step-btn.active { background: var(--bloodshed-red); box-shadow: 0 0 10px var(--bloodshed-red); border-color: var(--bloodshed-red); }
-    .row-hihat   .step-btn.active { background: var(--frenzy-gold);  box-shadow: 0 0 10px var(--frenzy-gold);  border-color: var(--frenzy-gold); }
-    .row-openhat .step-btn.active { background: #a855f7;             box-shadow: 0 0 10px #a855f7;             border-color: #a855f7; }
-    .row-bass    .step-btn.active { background: rgba(92,225,230,0.7); box-shadow: 0 0 8px var(--toxic-volt);   border-color: rgba(92,225,230,0.8); }
-    .row-stab    .step-btn.active { background: rgba(236,160,53,0.7); box-shadow: 0 0 8px var(--frenzy-gold);  border-color: rgba(236,160,53,0.8); }
+    .row-hihat   .step-btn.active { background: var(--frenzy-gold);   box-shadow: 0 0 10px var(--frenzy-gold);   border-color: var(--frenzy-gold); }
+    .row-openhat .step-btn.active { background: #a855f7;              box-shadow: 0 0 10px #a855f7;              border-color: #a855f7; }
+    .row-bass    .step-btn.active { background: rgba(92,225,230,0.7);  box-shadow: 0 0 8px var(--toxic-volt);    border-color: rgba(92,225,230,0.8); }
+    .row-stab    .step-btn.active { background: rgba(236,160,53,0.7);  box-shadow: 0 0 8px var(--frenzy-gold);   border-color: rgba(236,160,53,0.8); }
 
     /* Channel label border colours */
     .row-kick    .channel-label { border-left-color: var(--toxic-volt); }
@@ -506,46 +499,20 @@
     /* Beat number labels */
     .beat-numbers {
       display: grid;
-      grid-template-columns: 192px repeat(16, 1fr);
+      grid-template-columns: 220px repeat(16, 1fr);
       gap: 3px;
       margin-top: 4px;
     }
-    .beat-num {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.55rem;
-      text-align: center;
-      color: #555;
-      letter-spacing: 0;
-    }
+    .beat-num { font-family: 'Space Mono', monospace; font-size: 0.55rem; text-align: center; color: #555; letter-spacing: 0; }
     .beat-num.accent { color: var(--toxic-volt); font-weight: 700; }
 
     /* ─── ABOUT SECTION ──────────────────────────────────── */
-    #sobre {
-      padding: 3rem 1rem;
-      max-width: 700px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    #sobre p {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.85rem;
-      line-height: 1.8;
-      color: #bbb;
-    }
+    #sobre { padding: 3rem 1rem; max-width: 700px; margin: 0 auto; text-align: center; }
+    #sobre p { font-family: 'Space Mono', monospace; font-size: 0.85rem; line-height: 1.8; color: #bbb; }
 
     /* ─── FOOTER ─────────────────────────────────────────── */
-    footer {
-      background: #000;
-      border-top: 4px solid var(--toxic-volt);
-      padding: 2rem 1rem;
-      text-align: center;
-    }
-    footer p {
-      font-family: 'Space Mono', monospace;
-      font-size: 0.72rem;
-      color: #666;
-      line-height: 2;
-    }
+    footer { background: #000; border-top: 4px solid var(--toxic-volt); padding: 2rem 1rem; text-align: center; }
+    footer p { font-family: 'Space Mono', monospace; font-size: 0.72rem; color: #666; line-height: 2; }
     footer a {
       font-family: 'Teko', sans-serif;
       font-weight: 700;
@@ -560,13 +527,8 @@
     footer a:hover { color: var(--frenzy-gold); }
 
     /* ─── MISC ───────────────────────────────────────────── */
-    .sep-line {
-      height: 2px;
-      background: linear-gradient(90deg, transparent, var(--toxic-volt), transparent);
-      margin: 2.5rem 0;
-    }
+    .sep-line { height: 2px; background: linear-gradient(90deg, transparent, var(--toxic-volt), transparent); margin: 2.5rem 0; }
 
-    /* tap tempo flash */
     @keyframes tap-flash {
       0%   { box-shadow: 0 0 0 var(--frenzy-gold); }
       50%  { box-shadow: 0 0 20px var(--frenzy-gold); }
@@ -574,13 +536,189 @@
     }
     .tap-flash { animation: tap-flash 0.2s ease-out; }
 
-    /* scrollbar */
     ::-webkit-scrollbar { height: 5px; width: 5px; }
     ::-webkit-scrollbar-track { background: #111; }
     ::-webkit-scrollbar-thumb { background: var(--industrial-iron); border-radius: 2px; }
+
+    /* ════════════════════════════════════════
+       NEW FEATURES
+    ════════════════════════════════════════ */
+
+    /* 1 — Glitch Flash on Kick */
+    #glitch-flash {
+      position: fixed;
+      inset: 0;
+      z-index: 9997;
+      pointer-events: none;
+      opacity: 0;
+      background: rgba(92,225,230,0.14);
+      transition: opacity 0.06s ease-out;
+    }
+    #glitch-flash.flash {
+      opacity: 1;
+      transition: opacity 0s;
+    }
+
+    /* 2 — BPM Pulse Sync */
+    @keyframes bpm-pulse {
+      0%, 100% { box-shadow: 8px 8px 0 var(--industrial-iron); }
+      50%       { box-shadow: 8px 8px 0 var(--industrial-iron), 0 0 32px rgba(92,225,230,0.3); }
+    }
+    .bpm-sync { animation: bpm-pulse var(--beat-duration) ease-in-out infinite; }
+
+    @keyframes nav-pulse {
+      0%, 100% { box-shadow: none; }
+      50%       { box-shadow: 0 2px 20px rgba(92,225,230,0.25); }
+    }
+    #main-nav { animation: nav-pulse var(--beat-duration) ease-in-out infinite; }
+
+    /* 5 — HATE MODE */
+    body.hate-mode { --toxic-volt: #e74c3c; --frenzy-gold: #ff8c42; }
+    body.hate-mode #visualizerCanvas { border-color: #e74c3c; box-shadow: 0 0 22px rgba(231,76,60,0.5); }
+    body.hate-mode #oscilloscopeCanvas { border-color: #e74c3c44; }
+    body.hate-mode #hero {
+      background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(231,76,60,0.12) 0%, transparent 70%), var(--void-black);
+    }
+    body.hate-mode .sep-line { background: linear-gradient(90deg, transparent, #e74c3c, transparent); }
+    .btn-hate.active {
+      background: var(--bloodshed-red) !important;
+      color: #fff !important;
+      border-color: var(--bloodshed-red) !important;
+      box-shadow: 0 0 16px var(--bloodshed-red) !important;
+    }
+
+    /* 4 — CAVE MODE */
+    body.cave-mode #hero         { filter: brightness(0.8) saturate(0.5); }
+    body.cave-mode #beat-machine { filter: brightness(0.9); }
+    body.cave-mode #oscilloscopeCanvas { border-color: #4a90a440; }
+    .btn-cave.active {
+      background: #2a5c6e !important;
+      color: #8ecfdb !important;
+      border-color: #4a90a4 !important;
+      box-shadow: 0 0 14px rgba(74,144,164,0.6) !important;
+    }
+
+    /* 9 — Stage Mode */
+    body.stage-mode #main-nav,
+    body.stage-mode #hero,
+    body.stage-mode #sobre,
+    body.stage-mode footer,
+    body.stage-mode #mascot-mini-wrap { display: none !important; }
+    body.stage-mode #beat-machine { padding-top: 1.5rem; }
+    body.stage-mode body::before { display: none; }
+
+    #stage-exit-btn {
+      display: none;
+      position: fixed;
+      top: 10px; right: 10px;
+      z-index: 10000;
+      background: rgba(13,13,15,0.92);
+      color: var(--toxic-volt);
+      border: 2px solid var(--toxic-volt);
+      font-family: 'Teko', sans-serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 0.95rem;
+      padding: 4px 16px;
+      cursor: pointer;
+      clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+    }
+    body.stage-mode #stage-exit-btn { display: block; }
+
+    /* 10 — Mascot Mini */
+    #mascot-mini-wrap {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      z-index: 500;
+      width: 80px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.6s;
+    }
+    #mascot-mini-wrap.visible { opacity: 1; }
+    #mascot-mini {
+      width: 80px;
+      height: auto;
+      filter: drop-shadow(0 0 10px var(--toxic-volt)) saturate(0.8);
+      display: block;
+    }
+    @keyframes kick-shake {
+      0%   { transform: translateX(0) rotate(0deg) scaleY(1); }
+      20%  { transform: translateX(-5px) rotate(-3deg) scaleY(0.96); }
+      50%  { transform: translateX(5px) rotate(3deg) scaleY(1.04); }
+      75%  { transform: translateX(-2px) rotate(-1deg) scaleY(0.99); }
+      100% { transform: translateX(0) rotate(0deg) scaleY(1); }
+    }
+    @keyframes mascot-glitch-anim {
+      0%   { transform: translateX(0) skewX(0); filter: drop-shadow(0 0 10px var(--toxic-volt)) saturate(0.8); }
+      15%  { transform: translateX(-8px) skewX(4deg); filter: drop-shadow(5px 0 var(--bloodshed-red)) drop-shadow(-5px 0 var(--toxic-volt)) saturate(1.5); }
+      35%  { transform: translateX(8px) skewX(-4deg); filter: drop-shadow(0 0 2px #fff) saturate(2); }
+      55%  { transform: translateX(-4px) skewX(2deg); filter: drop-shadow(3px 0 var(--toxic-volt)) saturate(1); }
+      75%  { transform: translateX(4px); filter: drop-shadow(0 0 16px var(--frenzy-gold)) saturate(1.2); }
+      100% { transform: translateX(0) skewX(0); filter: drop-shadow(0 0 10px var(--toxic-volt)) saturate(0.8); }
+    }
+    #mascot-mini.kick-shake { animation: kick-shake 0.18s ease-out; }
+    #mascot-mini.mascot-glitch { animation: mascot-glitch-anim 0.45s ease-out; }
+
+    /* 8 — Share Modal */
+    #share-modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      z-index: 10002;
+      align-items: center;
+      justify-content: center;
+    }
+    #share-modal.open { display: flex; }
+    .share-inner {
+      background: #111113;
+      border: 4px solid var(--toxic-volt);
+      box-shadow: 8px 8px 0 var(--industrial-iron);
+      padding: 1.6rem;
+      max-width: 480px;
+      width: 90%;
+    }
+    .share-inner h4 {
+      font-family: 'Teko', sans-serif;
+      font-weight: 700;
+      font-style: italic;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      color: var(--toxic-volt);
+      margin-bottom: 0.8rem;
+      letter-spacing: 0.06em;
+    }
+    .share-inner textarea {
+      width: 100%;
+      height: 80px;
+      background: #000;
+      color: var(--toxic-volt);
+      border: 2px solid var(--toxic-volt);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      padding: 6px;
+      resize: none;
+      word-break: break-all;
+      outline: none;
+    }
+    .share-btns { display: flex; gap: 0.5rem; margin-top: 0.8rem; flex-wrap: wrap; }
+    #share-status {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      color: var(--frenzy-gold);
+      margin-top: 0.5rem;
+      min-height: 1.2em;
+    }
   </style>
 </head>
 <body>
+
+<!-- Kick flash overlay -->
+<div id="glitch-flash"></div>
+<!-- Stage mode exit -->
+<button id="stage-exit-btn" onclick="exitStageMode()">✕ EXIT STAGE</button>
 
 <!-- ══════════════════════════════════════
      NAV
@@ -599,11 +737,12 @@
 ══════════════════════════════════════ -->
 <section id="hero">
   <h1>
-    <span class="glitch" data-text="SKILO BEAT MACHINE">SKILO BEAT MACHINE</span>
+    <span class="glitch" data-text="SKILO BEAT MACHINE" id="hero-title">SKILO BEAT MACHINE</span>
   </h1>
   <p class="subtitle">// LIVE INTERACTIVE HARDWARE v2.0 // PSY TECHNO GROOVE ENGINE</p>
 
   <canvas id="visualizerCanvas" width="400" height="80"></canvas>
+  <canvas id="oscilloscopeCanvas" width="400" height="50"></canvas>
 
   <button
     id="heroStartBtn"
@@ -659,20 +798,20 @@
     </div>
   </div>
 
-  <!-- Pattern Banks -->
+  <!-- Pattern Banks (3 — renamed presets) -->
   <div class="bank-row">
     <span class="bank-label">BANK</span>
-    <button class="bank-btn active" data-bank="A">A</button>
-    <button class="bank-btn" data-bank="B">B</button>
-    <button class="bank-btn" data-bank="C">C</button>
-    <button class="bank-btn" data-bank="D">D</button>
+    <button class="bank-btn active" data-bank="A">VOID BREAKER</button>
+    <button class="bank-btn" data-bank="B">ACID DROP</button>
+    <button class="bank-btn" data-bank="C">PSY LOCK</button>
+    <button class="bank-btn" data-bank="D">BLANK</button>
   </div>
 
-  <!-- Master FX -->
+  <!-- Master FX + new mode buttons -->
   <div class="fx-row brut-card" style="margin-bottom: 1.5rem;">
     <div class="ctrl-group">
       <span class="ctrl-label">LOWPASS CUTOFF</span>
-      <input type="range" id="filterCutoff" min="200" max="20000" value="20000" style="width: 140px;">
+      <input type="range" id="filterCutoff" min="200" max="20000" value="20000" style="width: 130px;">
     </div>
     <div class="ctrl-group">
       <span class="ctrl-label">DUB DELAY</span>
@@ -680,12 +819,32 @@
     </div>
     <div class="ctrl-group">
       <span class="ctrl-label">MASTER VOL</span>
-      <input type="range" id="masterVolume" min="0" max="1" step="0.01" value="0.75" style="width: 120px;">
+      <input type="range" id="masterVolume" min="0" max="1" step="0.01" value="0.75" style="width: 110px;">
+    </div>
+    <!-- 4 — CAVE MODE -->
+    <div class="ctrl-group">
+      <span class="ctrl-label">CAVE REVERB</span>
+      <button id="caveModeBtn" class="btn-fx btn-cave">CAVE MODE</button>
+    </div>
+    <!-- 5 — HATE MODE -->
+    <div class="ctrl-group">
+      <span class="ctrl-label">DISTORTION</span>
+      <button id="hateModeBtn" class="btn-fx btn-hate">HATE MODE</button>
+    </div>
+    <!-- 8 — Share Pattern -->
+    <div class="ctrl-group">
+      <span class="ctrl-label">PATTERN</span>
+      <button id="shareBtn" class="btn-fx">SHARE / IMPORT</button>
+    </div>
+    <!-- 9 — Stage Mode -->
+    <div class="ctrl-group">
+      <span class="ctrl-label">PERFORMANCE</span>
+      <button id="stageModeBtn" class="btn-fx">STAGE MODE ⛶</button>
     </div>
   </div>
 
   <!-- Sequencer Grid -->
-  <div class="brut-card" style="padding: 1rem;">
+  <div class="brut-card bpm-sync" id="seq-card" style="padding: 1rem;">
     <div class="seq-grid-wrap">
       <div class="seq-grid-inner">
 
@@ -695,6 +854,10 @@
             <span class="ch-name" style="color: var(--toxic-volt);">PSY KICK</span>
             <button class="btn-mute" id="mute-kick" data-ch="kick">M</button>
             <button class="btn-solo" id="solo-kick" data-ch="kick">S</button>
+            <div class="pitch-wrap">
+              <span class="pitch-val" id="pitch-val-kick">0</span>
+              <input type="range" class="pitch-slider" data-ch="kick" min="-12" max="12" value="0" title="Pitch kick">
+            </div>
           </div>
         </div>
 
@@ -704,6 +867,10 @@
             <span class="ch-name" style="color: var(--bloodshed-red);">ACID CLAP</span>
             <button class="btn-mute" id="mute-clap" data-ch="clap">M</button>
             <button class="btn-solo" id="solo-clap" data-ch="clap">S</button>
+            <div class="pitch-wrap">
+              <span class="pitch-val" id="pitch-val-clap">0</span>
+              <input type="range" class="pitch-slider" data-ch="clap" min="-12" max="12" value="0" title="Pitch clap">
+            </div>
           </div>
         </div>
 
@@ -713,6 +880,10 @@
             <span class="ch-name" style="color: var(--frenzy-gold);">CLOSED HAT</span>
             <button class="btn-mute" id="mute-hihat" data-ch="hihat">M</button>
             <button class="btn-solo" id="solo-hihat" data-ch="hihat">S</button>
+            <div class="pitch-wrap">
+              <span class="pitch-val" id="pitch-val-hihat">0</span>
+              <input type="range" class="pitch-slider" data-ch="hihat" min="-12" max="12" value="0" title="Pitch hi-hat">
+            </div>
           </div>
         </div>
 
@@ -722,6 +893,10 @@
             <span class="ch-name" style="color: #a855f7;">OPEN HAT</span>
             <button class="btn-mute" id="mute-openhat" data-ch="openhat">M</button>
             <button class="btn-solo" id="solo-openhat" data-ch="openhat">S</button>
+            <div class="pitch-wrap">
+              <span class="pitch-val" id="pitch-val-openhat">0</span>
+              <input type="range" class="pitch-slider" data-ch="openhat" min="-12" max="12" value="0" title="Pitch open hat">
+            </div>
           </div>
         </div>
 
@@ -731,6 +906,10 @@
             <span class="ch-name" style="color: rgba(92,225,230,0.85);">PSY BASS</span>
             <button class="btn-mute" id="mute-bass" data-ch="bass">M</button>
             <button class="btn-solo" id="solo-bass" data-ch="bass">S</button>
+            <div class="pitch-wrap">
+              <span class="pitch-val" id="pitch-val-bass">0</span>
+              <input type="range" class="pitch-slider" data-ch="bass" min="-12" max="12" value="0" title="Pitch bass">
+            </div>
           </div>
         </div>
 
@@ -740,6 +919,10 @@
             <span class="ch-name" style="color: rgba(236,160,53,0.85);">TEKK STAB</span>
             <button class="btn-mute" id="mute-stab" data-ch="stab">M</button>
             <button class="btn-solo" id="solo-stab" data-ch="stab">S</button>
+            <div class="pitch-wrap">
+              <span class="pitch-val" id="pitch-val-stab">0</span>
+              <input type="range" class="pitch-slider" data-ch="stab" min="-12" max="12" value="0" title="Pitch stab">
+            </div>
           </div>
         </div>
 
@@ -770,6 +953,11 @@
 
 </section>
 
+<!-- 10 — Mascot mini widget -->
+<div id="mascot-mini-wrap">
+  <img id="mascot-mini" src="assets/img/persona.png" alt="Skilo">
+</div>
+
 <!-- ══════════════════════════════════════
      ABOUT SECTION
 ══════════════════════════════════════ -->
@@ -785,7 +973,8 @@
     <div class="sep-line" style="margin: 1.2rem 0;"></div>
     <p style="font-family: 'Space Mono', monospace; font-size: 0.72rem; line-height: 1.8; color: #666;">
       6 canais · 16 passos · Psy Kick · Acid Clap · Hi-Hat · Open Hat · Psy Bass · Tekk Stab<br>
-      Swing · Tap Tempo · Pattern Banks A/B/C/D · Master FX · Dub Delay
+      Swing · Tap Tempo · Banks: VOID BREAKER / ACID DROP / PSY LOCK / BLANK<br>
+      Cave Reverb · Hate Mode · Stage Mode · Pitch por canal · Osciloscópio · Share Pattern
     </p>
   </div>
 </section>
@@ -795,11 +984,34 @@
 ══════════════════════════════════════ -->
 <footer>
   <p>© 2026 SKILOFRENIKHZ | 140+ BPM · Todos os direitos reservados</p>
-  <p>Desenvolvido por Claudio Santana</p>
+  <p>Desenvolvido por Claudio Santana — <a href="https://fluencyworks.com.br" target="_blank" rel="noopener">Fluency Works</a></p>
   <p style="margin-top: 0.8rem;">
     <a href="index.html">← VOLTAR AO SITE PRINCIPAL</a>
   </p>
 </footer>
+
+<!-- 8 — Share / Import modal -->
+<div id="share-modal">
+  <div class="share-inner">
+    <h4>SHARE / IMPORT PATTERN</h4>
+    <textarea id="shareTextarea" spellcheck="false" placeholder="Código do pattern aparece aqui..."></textarea>
+    <div class="share-btns">
+      <button id="copyPatternBtn" class="btn-primary"
+        style="background: var(--toxic-volt); color: #000; font-size: 0.85rem; padding: 0.4rem 1.2rem;">
+        COPIAR
+      </button>
+      <button id="importPatternBtn" class="btn-primary"
+        style="background: var(--frenzy-gold); color: #000; font-size: 0.85rem; padding: 0.4rem 1.2rem;">
+        IMPORTAR
+      </button>
+      <button id="closeShareBtn" class="btn-primary"
+        style="background: #2a2a2a; color: #888; font-size: 0.85rem; padding: 0.4rem 1.2rem;">
+        FECHAR
+      </button>
+    </div>
+    <p id="share-status"></p>
+  </div>
+</div>
 
 <!-- ══════════════════════════════════════
      JAVASCRIPT
@@ -811,39 +1023,74 @@
   // ── Audio Context ──────────────────────────────────────────
   let audioCtx = null;
   let masterGain, masterFilter, analyserNode, delayNode, delayGain, dryGain;
-  let delayActive = false;
+  let distortionNode = null;
+  let caveDelayNode = null, caveFeedbackGain = null, caveWetGain = null;
+  let delayActive  = false;
+  let hateModeActive = false;
+  let caveModeActive = false;
+
+  function makeDistortionCurve(amount) {
+    const n = 256;
+    const curve = new Float32Array(n);
+    const deg = Math.PI / 180;
+    for (let i = 0; i < n; i++) {
+      const x = (i * 2) / n - 1;
+      curve[i] = ((3 + amount) * x * 20 * deg) / (Math.PI + amount * Math.abs(x));
+    }
+    return curve;
+  }
 
   function initAudio() {
     if (audioCtx) return;
     audioCtx = new (window.AudioContext || window.webkitAudioContext)();
 
-    masterGain   = audioCtx.createGain();
-    masterFilter = audioCtx.createBiquadFilter();
-    analyserNode = audioCtx.createAnalyser();
-    delayNode    = audioCtx.createDelay(1.0);
-    delayGain    = audioCtx.createGain();
-    dryGain      = audioCtx.createGain();
+    masterGain    = audioCtx.createGain();
+    masterFilter  = audioCtx.createBiquadFilter();
+    analyserNode  = audioCtx.createAnalyser();
+    delayNode     = audioCtx.createDelay(1.0);
+    delayGain     = audioCtx.createGain();
+    dryGain       = audioCtx.createGain();
+    distortionNode = audioCtx.createWaveShaper();
 
     masterFilter.type            = 'lowpass';
     masterFilter.frequency.value = 20000;
     analyserNode.fftSize         = 256;
 
-    delayNode.delayTime.value = 0.375; // dotted-eighth at 140 bpm ≈ 375ms
-    delayGain.gain.value      = 0.0;   // starts OFF
+    delayNode.delayTime.value = 0.375;
+    delayGain.gain.value      = 0.0;
     dryGain.gain.value        = 1.0;
+    distortionNode.curve      = makeDistortionCurve(0);
+    distortionNode.oversample = '4x';
 
-    // signal chain
-    masterGain.connect(masterFilter);
+    // Cave reverb nodes
+    caveDelayNode    = audioCtx.createDelay(1.0);
+    caveFeedbackGain = audioCtx.createGain();
+    caveWetGain      = audioCtx.createGain();
+    caveDelayNode.delayTime.value   = 0.22;
+    caveFeedbackGain.gain.value     = 0.55;
+    caveWetGain.gain.value          = 0.0;
+
+    // Signal chain: masterGain → distortionNode → masterFilter → dryGain + delayNode → analyser → dest
+    masterGain.connect(distortionNode);
+    distortionNode.connect(masterFilter);
     masterFilter.connect(dryGain);
     masterFilter.connect(delayNode);
     delayNode.connect(delayGain);
-    delayGain.connect(masterFilter); // feedback
+    delayGain.connect(masterFilter);
     masterFilter.connect(analyserNode);
     analyserNode.connect(audioCtx.destination);
+
+    // Cave reverb tap from masterFilter
+    masterFilter.connect(caveWetGain);
+    caveWetGain.connect(caveDelayNode);
+    caveDelayNode.connect(caveFeedbackGain);
+    caveFeedbackGain.connect(caveDelayNode);
+    caveDelayNode.connect(analyserNode);
 
     masterGain.gain.value = parseFloat(document.getElementById('masterVolume').value);
 
     startVisualizer();
+    startOscilloscope();
   }
 
   // ── Channel gains ──────────────────────────────────────────
@@ -870,17 +1117,26 @@
     return noiseBuffer;
   }
 
+  // ── 6 — Pitch state (semitones per channel) ───────────────
+  const pitchState = { kick:0, clap:0, hihat:0, openhat:0, bass:0, stab:0 };
+
+  function semitoneRatio(semi) { return Math.pow(2, semi / 12); }
+
   // ── Instruments ────────────────────────────────────────────
   function playKick() {
+    triggerFlash();
+    triggerMascotKick();
+
     const now = audioCtx.currentTime;
+    const ratio = semitoneRatio(pitchState.kick);
     const osc  = audioCtx.createOscillator();
     const gain = audioCtx.createGain();
     osc.connect(gain);
     gain.connect(getChannelGain('kick'));
 
     osc.type = 'sine';
-    osc.frequency.setValueAtTime(150, now);
-    osc.frequency.exponentialRampToValueAtTime(40, now + 0.35);
+    osc.frequency.setValueAtTime(150 * ratio, now);
+    osc.frequency.exponentialRampToValueAtTime(40 * ratio, now + 0.35);
     gain.gain.setValueAtTime(1.0, now);
     gain.gain.exponentialRampToValueAtTime(0.001, now + 0.35);
 
@@ -890,7 +1146,7 @@
 
   function playClap() {
     const now = audioCtx.currentTime;
-    // 2-layer snap + noise burst
+    const ratio = semitoneRatio(pitchState.clap);
     for (let i = 0; i < 2; i++) {
       const offset = i * 0.012;
       const src  = audioCtx.createBufferSource();
@@ -899,7 +1155,7 @@
 
       src.buffer = getNoiseBuffer();
       band.type = 'bandpass';
-      band.frequency.value = 1200 + i * 400;
+      band.frequency.value = (1200 + i * 400) * ratio;
       band.Q.value = 1.2;
 
       src.connect(band);
@@ -917,17 +1173,19 @@
   function playHiHat(closed) {
     const now      = audioCtx.currentTime;
     const duration = closed ? 0.04 : 0.18;
+    const ch       = closed ? 'hihat' : 'openhat';
+    const ratio    = semitoneRatio(pitchState[ch]);
     const src  = audioCtx.createBufferSource();
     const hpf  = audioCtx.createBiquadFilter();
     const env  = audioCtx.createGain();
 
     src.buffer = getNoiseBuffer();
     hpf.type = 'highpass';
-    hpf.frequency.value = 8000;
+    hpf.frequency.value = 8000 * ratio;
 
     src.connect(hpf);
     hpf.connect(env);
-    env.connect(getChannelGain(closed ? 'hihat' : 'openhat'));
+    env.connect(getChannelGain(ch));
 
     env.gain.setValueAtTime(closed ? 0.5 : 0.35, now);
     env.gain.exponentialRampToValueAtTime(0.001, now + duration);
@@ -937,13 +1195,14 @@
   }
 
   function playPsyBass() {
-    const now  = audioCtx.currentTime;
-    const osc  = audioCtx.createOscillator();
-    const lpf  = audioCtx.createBiquadFilter();
-    const env  = audioCtx.createGain();
+    const now   = audioCtx.currentTime;
+    const ratio = semitoneRatio(pitchState.bass);
+    const osc   = audioCtx.createOscillator();
+    const lpf   = audioCtx.createBiquadFilter();
+    const env   = audioCtx.createGain();
 
     osc.type = 'sawtooth';
-    osc.frequency.value = 55;
+    osc.frequency.value = 55 * ratio;
 
     lpf.type = 'lowpass';
     lpf.frequency.setValueAtTime(2000, now);
@@ -963,7 +1222,8 @@
 
   function playTekkStab() {
     const now   = audioCtx.currentTime;
-    const freqs = [220, 277, 330];
+    const ratio = semitoneRatio(pitchState.stab);
+    const freqs = [220, 277, 330].map(f => f * ratio);
     const env   = audioCtx.createGain();
     const lpf   = audioCtx.createBiquadFilter();
 
@@ -987,6 +1247,46 @@
       osc.start(now);
       osc.stop(now + 0.19);
     });
+  }
+
+  // ── 1 — Glitch Flash ──────────────────────────────────────
+  const flashEl = document.getElementById('glitch-flash');
+  let flashTimer = null;
+  function triggerFlash() {
+    if (!flashEl) return;
+    if (flashTimer) clearTimeout(flashTimer);
+    flashEl.classList.add('flash');
+    flashTimer = setTimeout(() => flashEl.classList.remove('flash'), 80);
+  }
+
+  // ── 10 — Mascot reactions ─────────────────────────────────
+  const mascotEl    = document.getElementById('mascot-mini');
+  const mascotWrap  = document.getElementById('mascot-mini-wrap');
+  let mascotKickTimer = null;
+  let mascotGlitchTimer = null;
+
+  function triggerMascotKick() {
+    if (!mascotEl) return;
+    if (mascotKickTimer) clearTimeout(mascotKickTimer);
+    mascotEl.classList.remove('kick-shake', 'mascot-glitch');
+    void mascotEl.offsetWidth; // reflow
+    mascotEl.classList.add('kick-shake');
+    mascotKickTimer = setTimeout(() => mascotEl.classList.remove('kick-shake'), 200);
+  }
+
+  function triggerMascotGlitch() {
+    if (!mascotEl) return;
+    if (mascotGlitchTimer) clearTimeout(mascotGlitchTimer);
+    mascotEl.classList.remove('kick-shake', 'mascot-glitch');
+    void mascotEl.offsetWidth;
+    mascotEl.classList.add('mascot-glitch');
+    mascotGlitchTimer = setTimeout(() => mascotEl.classList.remove('mascot-glitch'), 500);
+  }
+
+  // ── 2 — BPM Pulse Sync ────────────────────────────────────
+  function syncBpmCss(bpmVal) {
+    const ms = Math.round((60 / bpmVal) * 1000);
+    document.documentElement.style.setProperty('--beat-duration', ms + 'ms');
   }
 
   // ── Pattern Banks ──────────────────────────────────────────
@@ -1031,10 +1331,7 @@
   const muteState = { kick:false, clap:false, hihat:false, openhat:false, bass:false, stab:false };
   const soloState = { kick:false, clap:false, hihat:false, openhat:false, bass:false, stab:false };
 
-  function isSoloActive() {
-    return CHANNELS.some(ch => soloState[ch]);
-  }
-
+  function isSoloActive() { return CHANNELS.some(ch => soloState[ch]); }
   function shouldPlay(ch) {
     if (muteState[ch]) return false;
     if (isSoloActive() && !soloState[ch]) return false;
@@ -1049,29 +1346,22 @@
   let isPlaying    = false;
   let seqTimer     = null;
 
-  function stepDuration() {
-    return (60 / bpm / 4) * 1000;
-  }
+  function stepDuration() { return (60 / bpm / 4) * 1000; }
 
   function scheduleNextStep(step) {
     const base  = stepDuration();
-    // odd-indexed steps (1,3,5...) get swing delay
     const swing = (step % 2 === 1) ? base * (swingPercent / 100) * 0.4 : 0;
-    const delay = base + swing;
-    seqTimer = setTimeout(stepTick, delay);
+    seqTimer = setTimeout(stepTick, base + swing);
   }
 
   function stepTick() {
     if (!isPlaying) return;
 
-    // update display
     document.getElementById('stepDisplay').textContent = String(currentStep + 1).padStart(2,'0');
     document.getElementById('barDisplay').textContent  = String(bar).padStart(2,'0');
 
-    // clear previous playing highlight
     document.querySelectorAll('.step-btn.playing').forEach(b => b.classList.remove('playing'));
 
-    // highlight & fire
     CHANNELS.forEach(ch => {
       const btn = document.querySelector(`#row-${ch} .step-btn[data-step="${currentStep}"]`);
       if (btn) btn.classList.add('playing');
@@ -1086,12 +1376,13 @@
       }
     });
 
-    // advance
     currentStep++;
     if (currentStep >= 16) {
       currentStep = 0;
       bar++;
       if (bar > 99) bar = 1;
+      // 10 — mascot glitch every 4 bars
+      if (bar % 4 === 1) triggerMascotGlitch();
     }
 
     scheduleNextStep(currentStep);
@@ -1104,6 +1395,8 @@
     isPlaying   = true;
     currentStep = 0;
     bar         = 1;
+    syncBpmCss(bpm);
+    if (mascotWrap) mascotWrap.classList.add('visible');
     const playBtn = document.getElementById('seqPlayBtn');
     playBtn.textContent = '■ PARAR ENGINE';
     playBtn.classList.add('playing');
@@ -1116,6 +1409,7 @@
     document.querySelectorAll('.step-btn.playing').forEach(b => b.classList.remove('playing'));
     document.getElementById('stepDisplay').textContent = '01';
     document.getElementById('barDisplay').textContent  = '01';
+    if (mascotWrap) mascotWrap.classList.remove('visible');
     const playBtn = document.getElementById('seqPlayBtn');
     playBtn.textContent = '▶ INICIAR ENGINE';
     playBtn.classList.remove('playing');
@@ -1125,13 +1419,12 @@
   function buildSequencerGrid() {
     CHANNELS.forEach(ch => {
       const row = document.getElementById(`row-${ch}`);
-      // remove old step buttons (keep the label div)
       row.querySelectorAll('.step-btn').forEach(b => b.remove());
 
       const pattern = patternBanks[activeBank][ch];
       for (let i = 0; i < 16; i++) {
         const btn = document.createElement('button');
-        btn.className   = 'step-btn' + (pattern[i] ? ' active' : '');
+        btn.className    = 'step-btn' + (pattern[i] ? ' active' : '');
         btn.dataset.step = i;
         btn.dataset.ch   = ch;
         btn.title        = `${ch} step ${i+1}`;
@@ -1146,7 +1439,6 @@
 
   // ── Pattern Banks ───────────────────────────────────────────
   function switchPatternBank(key) {
-    // save current grid state
     CHANNELS.forEach(ch => {
       const row = document.getElementById(`row-${ch}`);
       row.querySelectorAll('.step-btn').forEach((btn, i) => {
@@ -1192,6 +1484,7 @@
         bpm = calcBpm;
         document.getElementById('bpmSlider').value = bpm;
         document.getElementById('bpmNumber').value = bpm;
+        syncBpmCss(bpm);
       }
     }
     const tapBtn = document.getElementById('tapTempoBtn');
@@ -1223,9 +1516,11 @@
       const barW = (W / bufLen) * 2.5;
       let x = 0;
       for (let i = 0; i < bufLen; i++) {
-        const barH = (data[i] / 255) * H;
+        const barH  = (data[i] / 255) * H;
         const alpha = 0.6 + (data[i] / 255) * 0.4;
-        ctx.fillStyle = `rgba(92,225,230,${alpha})`;
+        ctx.fillStyle = hateModeActive
+          ? `rgba(231,76,60,${alpha})`
+          : `rgba(92,225,230,${alpha})`;
         ctx.fillRect(x, H - barH, barW - 1, barH);
         x += barW + 1;
         if (x > W) break;
@@ -1234,11 +1529,133 @@
     draw();
   }
 
+  // ── 7 — Oscilloscope ─────────────────────────────────────────
+  let oscRunning = false;
+  function startOscilloscope() {
+    if (oscRunning) return;
+    oscRunning = true;
+    const canvas = document.getElementById('oscilloscopeCanvas');
+    const ctx    = canvas.getContext('2d');
+    const W      = canvas.width;
+    const H      = canvas.height;
+
+    function draw() {
+      if (!analyserNode) { requestAnimationFrame(draw); return; }
+      requestAnimationFrame(draw);
+
+      const bufLen = analyserNode.fftSize;
+      const data   = new Uint8Array(bufLen);
+      analyserNode.getByteTimeDomainData(data);
+
+      ctx.fillStyle = 'rgba(13,13,15,0.6)';
+      ctx.fillRect(0, 0, W, H);
+
+      ctx.lineWidth   = 1.5;
+      ctx.strokeStyle = hateModeActive ? 'rgba(231,76,60,0.8)' : 'rgba(92,225,230,0.7)';
+      ctx.beginPath();
+
+      const sliceW = W / bufLen;
+      let x = 0;
+      for (let i = 0; i < bufLen; i++) {
+        const v = data[i] / 128.0;
+        const y = (v * H) / 2;
+        if (i === 0) ctx.moveTo(x, y);
+        else         ctx.lineTo(x, y);
+        x += sliceW;
+      }
+      ctx.stroke();
+    }
+    draw();
+  }
+
+  // ── 4 — Cave Mode ─────────────────────────────────────────────
+  function toggleCaveMode() {
+    caveModeActive = !caveModeActive;
+    if (caveWetGain) {
+      caveWetGain.gain.setTargetAtTime(
+        caveModeActive ? 0.45 : 0.0,
+        audioCtx ? audioCtx.currentTime : 0, 0.05
+      );
+    }
+    document.body.classList.toggle('cave-mode', caveModeActive);
+    document.getElementById('caveModeBtn').classList.toggle('active', caveModeActive);
+  }
+
+  // ── 5 — Hate Mode ─────────────────────────────────────────────
+  function toggleHateMode() {
+    hateModeActive = !hateModeActive;
+    if (distortionNode) {
+      distortionNode.curve = makeDistortionCurve(hateModeActive ? 180 : 0);
+    }
+    document.body.classList.toggle('hate-mode', hateModeActive);
+    document.getElementById('hateModeBtn').classList.toggle('active', hateModeActive);
+    const titleEl = document.getElementById('hero-title');
+    if (titleEl) {
+      titleEl.textContent = hateModeActive ? 'HATE GROOVE ENGINE' : 'SKILO BEAT MACHINE';
+      titleEl.dataset.text = hateModeActive ? 'HATE GROOVE ENGINE' : 'SKILO BEAT MACHINE';
+    }
+  }
+
+  // ── 8 — Share / Import Pattern ─────────────────────────────────
+  function encodePattern() {
+    // Sync grid state first
+    CHANNELS.forEach(ch => {
+      const row = document.getElementById(`row-${ch}`);
+      row.querySelectorAll('.step-btn').forEach((btn, i) => {
+        patternBanks[activeBank][ch][i] = btn.classList.contains('active') ? 1 : 0;
+      });
+    });
+    return btoa(JSON.stringify(patternBanks[activeBank]));
+  }
+
+  function decodePattern(str) {
+    try {
+      const data = JSON.parse(atob(str.trim()));
+      CHANNELS.forEach(ch => {
+        if (Array.isArray(data[ch]) && data[ch].length === 16) {
+          patternBanks[activeBank][ch] = data[ch].map(v => v ? 1 : 0);
+        }
+      });
+      buildSequencerGrid();
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  function openShareModal() {
+    const modal = document.getElementById('share-modal');
+    const ta    = document.getElementById('shareTextarea');
+    ta.value = encodePattern();
+    document.getElementById('share-status').textContent = '';
+    modal.classList.add('open');
+  }
+
+  function closeShareModal() {
+    document.getElementById('share-modal').classList.remove('open');
+  }
+
+  // ── 9 — Stage Mode ────────────────────────────────────────────
+  function enterStageMode() {
+    document.body.classList.add('stage-mode');
+    const el = document.documentElement;
+    if (el.requestFullscreen) el.requestFullscreen().catch(() => {});
+  }
+
+  function exitStageMode() {
+    document.body.classList.remove('stage-mode');
+    if (document.fullscreenElement && document.exitFullscreen) {
+      document.exitFullscreen().catch(() => {});
+    }
+  }
+  window.exitStageMode = exitStageMode;
+
   // ── Event wiring ──────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', () => {
     buildSequencerGrid();
+    syncBpmCss(bpm);
 
-    // Hero start button
+    // Hero start
     document.getElementById('heroStartBtn').addEventListener('click', () => {
       initAudio();
       if (!isPlaying) startSequencer();
@@ -1251,19 +1668,16 @@
       if (isPlaying) stopSequencer(); else startSequencer();
     });
 
-    // Random
-    document.getElementById('randomBtn').addEventListener('click', () => {
-      initAudio();
-      randomizeSequencer();
-    });
-
-    // Clear
+    // Random / Clear
+    document.getElementById('randomBtn').addEventListener('click', () => { initAudio(); randomizeSequencer(); });
     document.getElementById('clearBtn').addEventListener('click', clearSequencer);
 
     // BPM slider
     document.getElementById('bpmSlider').addEventListener('input', function() {
       bpm = parseInt(this.value);
       document.getElementById('bpmNumber').value = bpm;
+      syncBpmCss(bpm);
+      if (delayNode) delayNode.delayTime.value = 60 / bpm * 0.375 / (140 / bpm);
     });
 
     // BPM number
@@ -1272,6 +1686,7 @@
       if (v >= 120 && v <= 160) {
         bpm = v;
         document.getElementById('bpmSlider').value = bpm;
+        syncBpmCss(bpm);
       }
     });
 
@@ -1323,6 +1738,63 @@
         soloState[ch] = !soloState[ch];
         btn.classList.toggle('soloed', soloState[ch]);
       });
+    });
+
+    // 6 — Pitch sliders
+    document.querySelectorAll('.pitch-slider').forEach(slider => {
+      const ch = slider.dataset.ch;
+      slider.addEventListener('input', function() {
+        pitchState[ch] = parseInt(this.value);
+        const valEl = document.getElementById(`pitch-val-${ch}`);
+        if (valEl) valEl.textContent = pitchState[ch] > 0 ? '+' + pitchState[ch] : pitchState[ch];
+      });
+    });
+
+    // 4 — Cave Mode
+    document.getElementById('caveModeBtn').addEventListener('click', () => {
+      initAudio();
+      toggleCaveMode();
+    });
+
+    // 5 — Hate Mode
+    document.getElementById('hateModeBtn').addEventListener('click', () => {
+      initAudio();
+      toggleHateMode();
+    });
+
+    // 8 — Share / Import
+    document.getElementById('shareBtn').addEventListener('click', openShareModal);
+    document.getElementById('closeShareBtn').addEventListener('click', closeShareModal);
+    document.getElementById('share-modal').addEventListener('click', function(e) {
+      if (e.target === this) closeShareModal();
+    });
+    document.getElementById('copyPatternBtn').addEventListener('click', () => {
+      const ta = document.getElementById('shareTextarea');
+      ta.value = encodePattern();
+      navigator.clipboard.writeText(ta.value).then(() => {
+        document.getElementById('share-status').textContent = '✓ Copiado para a área de transferência!';
+      }).catch(() => {
+        ta.select();
+        document.execCommand('copy');
+        document.getElementById('share-status').textContent = '✓ Copiado!';
+      });
+    });
+    document.getElementById('importPatternBtn').addEventListener('click', () => {
+      const val = document.getElementById('shareTextarea').value;
+      const ok = decodePattern(val);
+      document.getElementById('share-status').textContent = ok
+        ? '✓ Pattern importado com sucesso!'
+        : '✗ Código inválido. Verifique e tente novamente.';
+    });
+
+    // 9 — Stage Mode
+    document.getElementById('stageModeBtn').addEventListener('click', enterStageMode);
+
+    // Exit fullscreen via ESC also removes stage mode
+    document.addEventListener('fullscreenchange', () => {
+      if (!document.fullscreenElement) {
+        document.body.classList.remove('stage-mode');
+      }
     });
   });
 
