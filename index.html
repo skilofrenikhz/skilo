@@ -1,0 +1,2675 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SKILOFRENIKHZ | 140+ BPM HATE & GROOVE</title>
+    <meta
+      name="description"
+      content="SkiloFrenikhz — DJ e Produtor Musical. Psy Techno, Bounce e Acid Rave a 140+ BPM. Booking via Somma. Giovanni Ramos Garcia."
+    />
+    <meta
+      property="og:title"
+      content="SKILOFRENIKHZ | 140+ BPM HATE & GROOVE"
+    />
+    <meta
+      property="og:description"
+      content="Do Psy Trance ao Techno pesado, do Bounce ao Funk de rua. 140+ BPM. Sem freio."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/img/logo.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SKILOFRENIKHZ | 140+ BPM" />
+    <meta name="theme-color" content="#5CE1E6" />
+    <link rel="icon" type="image/png" href="assets/img/logo.png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      :root {
+        --void-black: #0d0d0f;
+        --chrome-white: #ffffff;
+        --toxic-volt: #5ce1e6;
+        --frenzy-gold: #eca035;
+        --bloodshed-red: #e74c3c;
+        --industrial-iron: #34495e;
+      }
+
+      body {
+        background-color: var(--void-black);
+        color: var(--chrome-white);
+        font-family: "Space Mono", monospace;
+        overflow-x: hidden;
+        position: relative;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100vw;
+        height: 100vh;
+        background-image:
+          repeating-linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5) 1px,
+            transparent 1px,
+            transparent 3px
+          ),
+          url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E");
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      .font-display {
+        font-family: "Teko", sans-serif;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 0.9;
+      }
+
+      .btn-brutal {
+        display: inline-block;
+        background: var(--void-black);
+        color: var(--chrome-white);
+        border: 4px solid var(--chrome-white);
+        padding: 0.5rem 2rem;
+        font-family: "Teko", sans-serif;
+        font-size: 2rem;
+        font-weight: 700;
+        font-style: italic;
+        text-transform: uppercase;
+        box-shadow: 6px 6px 0px var(--toxic-volt);
+        transition: all 0.15s cubic-bezier(0.87, 0, 0.13, 1);
+        position: relative;
+        z-index: 10;
+        clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%);
+        cursor: pointer;
+      }
+
+      .btn-brutal:hover {
+        background: var(--chrome-white);
+        color: var(--void-black);
+        box-shadow: -6px -6px 0px var(--bloodshed-red);
+        transform: translate(2px, 2px);
+      }
+
+      .btn-brutal:active {
+        box-shadow: 0px 0px 0px transparent;
+        transform: translate(6px, 6px);
+      }
+
+      .card-arsenal {
+        background: var(--void-black);
+        border: 4px solid var(--chrome-white);
+        padding: 1.5rem;
+        box-shadow: 8px 8px 0px var(--industrial-iron);
+        transition: all 0.15s ease-out;
+        position: relative;
+      }
+
+      .card-arsenal:hover {
+        box-shadow: 12px 12px 0px var(--frenzy-gold);
+        border-color: var(--frenzy-gold);
+        transform: translate(-4px, -4px);
+      }
+
+      .glitch-text {
+        position: relative;
+      }
+      .glitch-text::before,
+      .glitch-text::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--void-black);
+      }
+      .glitch-text::before {
+        left: 3px;
+        text-shadow: -2px 0 var(--bloodshed-red);
+        clip: rect(24px, 550px, 90px, 0);
+        animation: glitch-anim 3s infinite linear alternate-reverse;
+      }
+      .glitch-text::after {
+        left: -3px;
+        text-shadow: -2px 0 var(--toxic-volt);
+        clip: rect(85px, 550px, 140px, 0);
+        animation: glitch-anim 2.5s infinite linear alternate-reverse;
+      }
+
+      @keyframes glitch-anim {
+        0% {
+          clip: rect(10px, 9999px, 86px, 0);
+        }
+        5% {
+          clip: rect(74px, 9999px, 24px, 0);
+        }
+        10% {
+          clip: rect(17px, 9999px, 94px, 0);
+        }
+        15% {
+          clip: rect(4px, 9999px, 50px, 0);
+        }
+        20% {
+          clip: rect(32px, 9999px, 78px, 0);
+        }
+        25% {
+          clip: rect(81px, 9999px, 11px, 0);
+        }
+        100% {
+          clip: rect(81px, 9999px, 11px, 0);
+        }
+      }
+
+      .flash-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: var(--toxic-volt);
+        opacity: 0;
+        pointer-events: none;
+        z-index: 9999;
+        transition: opacity 0.05s ease-out;
+      }
+      .flash-active {
+        opacity: 0.15;
+      }
+
+      .marquee-container {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        background-color: var(--chrome-white);
+        color: var(--void-black);
+        border-top: 4px solid var(--toxic-volt);
+        border-bottom: 4px solid var(--toxic-volt);
+        padding: 0.5rem 0;
+        display: flex;
+      }
+      .marquee-content {
+        display: inline-block;
+        animation: marquee 15s linear infinite;
+        font-family: "Teko", sans-serif;
+        font-size: 2.5rem;
+        font-weight: 700;
+        font-style: italic;
+        text-transform: uppercase;
+      }
+      @media (max-width: 767px) {
+        .marquee-content {
+          font-size: 1.8rem;
+        }
+      }
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      .stroke-text {
+        -webkit-text-stroke: 2px var(--chrome-white);
+        color: transparent;
+      }
+
+      .image-fallback {
+        display: none;
+        width: 100%;
+        min-height: 380px;
+        background: repeating-linear-gradient(
+          45deg,
+          var(--void-black),
+          var(--void-black) 10px,
+          var(--industrial-iron) 10px,
+          var(--industrial-iron) 20px
+        );
+        border: 4px solid var(--chrome-white);
+        align-items: center;
+        justify-content: center;
+        font-family: "Teko", sans-serif;
+        font-size: 2.5rem;
+        color: var(--toxic-volt);
+        text-shadow: 4px 4px 0px var(--void-black);
+        text-align: center;
+        padding: 2rem;
+        box-shadow: inset 0 0 50px #000;
+      }
+
+      img.asset-img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+      .fallback-wrapper {
+        position: relative;
+        width: 100%;
+        min-height: 380px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .blink-cursor::after {
+        content: "█";
+        animation: blink 1s step-start infinite;
+        color: var(--toxic-volt);
+      }
+      @keyframes blink {
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.2s ease;
+      }
+      .modal-overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+      }
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        width: 60px !important;
+        height: 60px !important;
+        background: var(--void-black) !important;
+        border: 4px solid var(--chrome-white) !important;
+        box-shadow: 4px 4px 0px var(--toxic-volt);
+        transition: all 0.15s cubic-bezier(0.87, 0, 0.13, 1) !important;
+      }
+      .swiper-button-next:hover,
+      .swiper-button-prev:hover {
+        background: var(--toxic-volt) !important;
+        box-shadow: -4px -4px 0px var(--bloodshed-red);
+        transform: translate(2px, 2px);
+      }
+      .swiper-button-next::after,
+      .swiper-button-prev::after {
+        font-family: "Teko", sans-serif;
+        font-style: italic;
+        font-size: 3rem !important;
+        font-weight: 700 !important;
+        color: var(--chrome-white) !important;
+      }
+      .swiper-button-next:hover::after,
+      .swiper-button-prev:hover::after {
+        color: var(--void-black) !important;
+      }
+      .swiper-pagination-bullet {
+        width: 16px !important;
+        height: 16px !important;
+        background: transparent !important;
+        border: 4px solid var(--industrial-iron) !important;
+        border-radius: 0 !important;
+        opacity: 1 !important;
+      }
+      .swiper-pagination-bullet-active {
+        background: var(--toxic-volt) !important;
+        border-color: var(--toxic-volt) !important;
+        transform: scale(1.1);
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .animate-on-load {
+        opacity: 0;
+        animation: fadeInUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+      }
+
+      /* ─── 3D MASCOT CARD SYSTEM ─── */
+      .mascot-container {
+        perspective: 1000px;
+        transform-style: preserve-3d;
+        cursor: grab;
+      }
+      .mascot-container:active {
+        cursor: grabbing;
+      }
+
+      .mascot-card {
+        transition:
+          transform 0.1s ease-out,
+          box-shadow 0.2s ease;
+        will-change: transform;
+      }
+
+      @keyframes mascot-glitch-transform {
+        0% {
+          transform: translate(0, 0);
+        }
+        33% {
+          transform: translate(-2px, 2px);
+        }
+        66% {
+          transform: translate(2px, -2px);
+        }
+        100% {
+          transform: translate(0, 0);
+        }
+      }
+
+      @keyframes mascot-click-glitch {
+        0% {
+          transform: translate(0, 0) scale(1);
+          filter: hue-rotate(0deg);
+        }
+        25% {
+          transform: translate(-5px, 5px) scale(1.05);
+          filter: hue-rotate(90deg);
+        }
+        50% {
+          transform: translate(5px, -5px) scale(1.05);
+          filter: hue-rotate(180deg);
+        }
+        75% {
+          transform: translate(-5px, 5px) scale(1.05);
+          filter: hue-rotate(270deg);
+        }
+        100% {
+          transform: translate(0, 0) scale(1);
+          filter: hue-rotate(360deg);
+        }
+      }
+
+      .mascot-container.clicked #mascotImg {
+        animation: mascot-click-glitch 0.3s linear 1;
+      }
+
+      /* Speech Bubble */
+      .speech-bubble {
+        position: absolute;
+        bottom: -54px;
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+        background: var(--void-black);
+        border: 3px solid var(--toxic-volt);
+        color: var(--chrome-white);
+        padding: 0.75rem 1.25rem;
+        font-family: "Space Mono", monospace;
+        font-size: 0.82rem;
+        font-weight: bold;
+        text-align: center;
+        box-shadow: 5px 5px 0px var(--frenzy-gold);
+        z-index: 40;
+        opacity: 0;
+        transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        pointer-events: none;
+        white-space: nowrap;
+        max-width: 90vw;
+      }
+      .speech-bubble::before {
+        content: "";
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 0 8px 10px 8px;
+        border-style: solid;
+        border-color: transparent transparent var(--toxic-volt) transparent;
+      }
+      .mascot-container:hover .speech-bubble {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0px);
+      }
+
+      /* Equalizer Bars */
+      @keyframes eq-bounce {
+        0%,
+        100% {
+          height: 10px;
+        }
+        50% {
+          height: 48px;
+        }
+      }
+      .eq-bar {
+        animation: eq-bounce 0.7s ease-in-out infinite alternate;
+      }
+      .eq-bar:nth-child(2) {
+        animation-delay: 0.15s;
+      }
+      .eq-bar:nth-child(3) {
+        animation-delay: 0.3s;
+      }
+      .eq-bar:nth-child(4) {
+        animation-delay: 0.05s;
+      }
+      .eq-bar:nth-child(5) {
+        animation-delay: 0.4s;
+      }
+
+      /* Spark Icons */
+      @keyframes spark-float {
+        0% {
+          transform: translateY(0px) scale(1);
+          opacity: 0.7;
+        }
+        50% {
+          transform: translateY(-12px) scale(1.2);
+          opacity: 1;
+        }
+        100% {
+          transform: translateY(0px) scale(1);
+          opacity: 0.7;
+        }
+      }
+      .spark-icon {
+        animation: spark-float 2s infinite ease-in-out;
+      }
+
+
+      .floating-animation {
+        animation: float 6s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(-10px);
+        }
+        50% {
+          transform: translateY(8px);
+        }
+      }
+
+      .counter-value {
+        font-family: "Teko", sans-serif;
+        font-size: 3rem;
+        font-weight: 700;
+        color: var(--toxic-volt);
+        display: block;
+        line-height: 1;
+      }
+
+
+      .gallery-image {
+        width: 100%;
+        aspect-ratio: 4/5;
+        object-fit: cover;
+        display: block;
+        border: 4px solid var(--chrome-white);
+      }
+
+      /* ─── BOOT SCREEN ─── */
+      #bootScreen {
+        transition: opacity 0.5s ease;
+      }
+
+      /* ─── SCROLL PROGRESS BAR ─── */
+      #scrollProgress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: var(--toxic-volt);
+        z-index: 99999;
+        box-shadow: 0 0 8px var(--toxic-volt);
+        pointer-events: none;
+      }
+
+      /* ─── CUSTOM CURSOR (só na persona) ─── */
+      #mascotWrapper {
+        cursor: none !important;
+      }
+      .custom-cursor {
+        position: fixed;
+        font-size: 1.8rem;
+        line-height: 1;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 999999;
+        opacity: 0;
+        transition: opacity 0.15s ease, font-size 0.12s ease;
+        user-select: none;
+      }
+      .custom-cursor.visible {
+        opacity: 1;
+      }
+      .custom-cursor.hovering {
+        font-size: 2.4rem;
+        filter: drop-shadow(0 0 8px var(--frenzy-gold));
+      }
+
+      /* ─── SCROLL REVEAL ─── */
+      .reveal-hidden {
+        opacity: 0;
+        transform: translateY(28px);
+        transition:
+          opacity 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+          transform 0.65s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+      .reveal-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* ─── AURA RINGS ─── */
+      @keyframes aura-expand {
+        0% {
+          transform: scale(1);
+          opacity: 0.8;
+        }
+        100% {
+          transform: scale(1.4);
+          opacity: 0;
+        }
+      }
+      .aura-ring {
+        position: absolute;
+        inset: -4px;
+        border: 2px solid var(--toxic-volt);
+        pointer-events: none;
+        opacity: 0;
+        z-index: 25;
+      }
+      .aura-ring.fire {
+        animation: aura-expand 0.9s ease-out forwards;
+      }
+      .aura-ring:nth-of-type(2).fire {
+        animation-delay: 0.14s;
+        border-color: var(--frenzy-gold);
+      }
+      .aura-ring:nth-of-type(3).fire {
+        animation-delay: 0.28s;
+        border-color: var(--bloodshed-red);
+      }
+
+      /* ─── ENERGY WAV TEXT ─── */
+      @keyframes wav-appear {
+        0% {
+          opacity: 0;
+          transform: translateX(-50%) translateY(-50%) scale(0.7);
+          filter: blur(8px);
+        }
+        25% {
+          opacity: 1;
+          filter: blur(0);
+        }
+        75% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translateX(-50%) translateY(-50%) scale(1.25);
+          filter: blur(4px);
+        }
+      }
+      .energy-wav {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        font-family: "Teko", sans-serif;
+        font-size: clamp(1.4rem, 5vw, 2.2rem);
+        font-weight: 700;
+        font-style: italic;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--toxic-volt);
+        text-shadow:
+          0 0 24px var(--toxic-volt),
+          0 0 50px var(--toxic-volt);
+        pointer-events: none;
+        opacity: 0;
+        white-space: nowrap;
+        z-index: 50;
+      }
+      .energy-wav.fire {
+        animation: wav-appear 1.5s ease-out forwards;
+      }
+
+      /* ─── STROKE H1 COLOR CYCLE (sem layout shift) ─── */
+      @keyframes stroke-shift {
+        0%,
+        100% {
+          -webkit-text-stroke-color: var(--toxic-volt);
+        }
+        33% {
+          -webkit-text-stroke-color: var(--frenzy-gold);
+        }
+        66% {
+          -webkit-text-stroke-color: var(--bloodshed-red);
+        }
+      }
+      #scramble-h1 {
+        animation: stroke-shift 9s ease-in-out infinite;
+      }
+
+      /* ─── MASCOT CARD HOVER GLOW ─── */
+      .mascot-container:hover #mascotCard {
+        box-shadow:
+          12px 12px 0px var(--frenzy-gold),
+          0 0 40px rgba(92, 225, 230, 0.2);
+      }
+
+      /* ─── NÓS HOVER REVEAL ─── */
+      #mascotImg {
+        transition:
+          filter 0.4s ease,
+          transform 0.1s ease-out !important;
+      }
+      .mascot-container:hover #mascotImg {
+        filter: contrast(1.4) brightness(0.25) saturate(0) hue-rotate(180deg);
+      }
+
+      .nos-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        z-index: 20;
+        background: linear-gradient(
+          135deg,
+          rgba(0,0,0,0.15) 0%,
+          rgba(92,225,230,0.04) 100%
+        );
+      }
+      .mascot-container:hover .nos-overlay {
+        opacity: 1;
+      }
+
+      .nos-emoji {
+        font-size: clamp(3rem, 8vw, 4.5rem);
+        line-height: 1;
+        margin-bottom: 0.4rem;
+        display: block;
+        animation: nos-float 1.6s ease-in-out infinite;
+        filter: drop-shadow(0 0 12px var(--toxic-volt));
+      }
+      @keyframes nos-float {
+        0%, 100% { transform: translateY(0) rotate(-8deg); }
+        50%       { transform: translateY(-10px) rotate(8deg); }
+      }
+
+      .nos-text {
+        font-family: "Teko", sans-serif;
+        font-size: clamp(3.2rem, 9vw, 5.5rem);
+        font-weight: 700;
+        font-style: italic;
+        line-height: 0.9;
+        text-align: center;
+        color: var(--chrome-white);
+        -webkit-text-stroke: 2px var(--toxic-volt);
+        position: relative;
+        animation: nos-glitch 3s infinite;
+        text-shadow:
+          3px 0 var(--bloodshed-red),
+          -3px 0 var(--toxic-volt);
+      }
+
+      @keyframes nos-glitch {
+        0%, 88%, 100% {
+          transform: skewX(0deg) scaleX(1);
+        }
+        90% {
+          transform: skewX(-4deg) scaleX(1.04);
+        }
+        93% {
+          transform: skewX(3deg) scaleX(0.97);
+        }
+        96% {
+          transform: skewX(-1deg) scaleX(1.01);
+        }
+      }
+      @keyframes nos-glitch-r {
+        0%, 88%, 100% { transform: translate(0, 0); }
+        90% { transform: translate(6px, -2px); }
+        93% { transform: translate(-4px, 2px); }
+      }
+      @keyframes nos-glitch-l {
+        0%, 88%, 100% { transform: translate(0, 0); }
+        90% { transform: translate(-6px, 2px); }
+        93% { transform: translate(4px, -2px); }
+      }
+
+
+      /* Mobile-specific adjustments */
+      @media (max-width: 767px) {
+        /* Targets screens smaller than Tailwind's 'md' breakpoint (768px) */
+        .fallback-wrapper {
+          min-height: 250px; /* Smaller min-height for general fallback wrappers on mobile */
+        }
+        .image-fallback {
+          min-height: 250px; /* Smaller min-height for general image fallbacks on mobile */
+          font-size: 1.8rem; /* Smaller font for mobile fallback text */
+        }
+        .image-fallback span {
+          /* For the text inside the fallback, e.g., "Insert 'persona.png' in directory" */
+          font-size: 1rem; /* Smaller text inside fallback for mobile */
+        }
+        /* The logo's specific !h-16 and !text-3xl will override these if needed */
+      }
+    </style>
+  </head>
+  <body class="antialiased selection:bg-[#E74C3C] selection:text-white">
+    <!-- Boot Screen -->
+    <div
+      id="bootScreen"
+      class="fixed inset-0 z-[999999] bg-black flex flex-col items-center justify-center"
+    >
+      <div class="font-mono text-center px-8 max-w-lg w-full">
+        <div class="font-display text-5xl italic text-white mb-1 tracking-wide">
+          SKILOFRENIKHZ
+        </div>
+        <div class="text-xs text-zinc-600 font-mono mb-8 tracking-widest">
+          v2.0 // SISTEMA PSICÓTICO INICIANDO
+        </div>
+        <div
+          id="bootLines"
+          class="text-sm text-left space-y-1 min-h-[130px] text-[var(--toxic-volt)]"
+        ></div>
+        <div class="mt-5 w-full bg-zinc-900 h-[3px] border border-zinc-800">
+          <div
+            id="bootBar"
+            class="h-full bg-[var(--toxic-volt)] shadow-[0_0_8px_#5CE1E6]"
+            style="width: 0%; transition: width 0.25s ease"
+          ></div>
+        </div>
+        <div class="text-xs text-zinc-700 mt-2 font-mono" id="bootPct">0%</div>
+      </div>
+    </div>
+
+    <!-- Custom Cursor (só na persona) -->
+    <div id="customCursor" class="custom-cursor" aria-hidden="true">🌰</div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scrollProgress" style="width: 0%"></div>
+
+    <div class="flash-overlay" id="electricFlash"></div>
+
+    <div class="modal-overlay" id="customModal">
+      <div
+        class="card-arsenal max-w-lg w-full mx-4 bg-black border-4 border-[var(--toxic-volt)] p-8"
+      >
+        <h3 class="text-4xl text-[var(--toxic-volt)] mb-4">
+          CONFIRMAÇÃO DO SISTEMA
+        </h3>
+        <p id="modalMessage" class="text-xl mb-6 text-gray-200">
+          Mensagem padrão do sistema.
+        </p>
+        <button
+          onclick="closeModal()"
+          class="btn-brutal text-2xl w-full text-center"
+        >
+          ENTENDIDO [ OK ]
+        </button>
+      </div>
+    </div>
+
+    <nav
+      class="fixed top-0 left-0 w-full z-50 p-4 mix-blend-difference bg-black/60 backdrop-blur-md"
+    >
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div
+          class="w-36 md:w-56 transform -rotate-2 hover:rotate-2 transition-transform duration-200 cursor-pointer"
+          onclick="triggerFlash()"
+        >
+          <div class="fallback-wrapper !min-h-0 !h-16">
+            <img
+              src="assets/img/logo.png"
+              alt="SKILOFRENIKHZ LOGO"
+              class="asset-img drop-shadow-[4px_4px_0_#5CE1E6]"
+              onerror="
+                this.style.display = 'none';
+                this.nextElementSibling.style.display = 'flex';
+              "
+            />
+            <div
+              class="image-fallback !min-h-0 !h-16 !border-none !text-3xl !bg-transparent !p-0 !text-white !drop-shadow-[4px_4px_0_#5CE1E6]"
+              style="justify-content: flex-start"
+            >
+              SKILOFRENIKHZ
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="hidden lg:flex space-x-6 text-xl font-bold italic font-display"
+        >
+          <a
+            href="#manifesto"
+            class="hover:text-[var(--toxic-volt)] transition-colors"
+            >MANIFESTO</a
+          >
+          <a
+            href="#dna"
+            class="hover:text-[var(--frenzy-gold)] transition-colors"
+            >DNA & RAIZ</a
+          >
+          <a
+            href="#tracks"
+            class="hover:text-[var(--bloodshed-red)] transition-colors"
+            >PLAYER</a
+          >
+          <a
+            href="#gigs"
+            class="hover:text-[var(--toxic-volt)] transition-colors"
+            >PALCOS & TOUR</a
+          >
+          <a
+            href="#groove"
+            class="hover:text-[var(--frenzy-gold)] transition-colors"
+            >TECHNO x FUNK</a
+          >
+          <a
+            href="#galeria"
+            class="hover:text-[var(--toxic-volt)] transition-colors"
+            >GALERIA</a
+          >
+          <a
+            href="#rider"
+            class="hover:text-[var(--bloodshed-red)] transition-colors"
+            >RIDER TÉCNICO</a
+          >
+          <a
+            href="#booking"
+            class="hover:text-[var(--toxic-volt)] transition-colors"
+            >BOOKING</a
+          >
+          <a
+            href="skilo-beat-machine.html"
+            class="border-2 border-[var(--toxic-volt)] text-[var(--toxic-volt)] px-3 py-1 hover:bg-[var(--toxic-volt)] hover:text-black transition-colors"
+            >BEAT MACHINE ⚡</a
+          >
+        </div>
+
+        <button
+          class="lg:hidden border-4 border-white p-2 hover:bg-white hover:text-black font-display text-2xl"
+          onclick="toggleMobileMenu()"
+        >
+          MENU
+        </button>
+      </div>
+
+      <div
+        id="mobileMenu"
+        class="hidden flex-col bg-black border-4 border-white mt-4 p-4 space-y-3 lg:hidden font-display text-2xl"
+      >
+        <a href="#manifesto" onclick="toggleMobileMenu()">MANIFESTO</a>
+        <a href="#dna" onclick="toggleMobileMenu()">DNA & RAIZ</a>
+        <a href="#tracks" onclick="toggleMobileMenu()">PLAYER</a>
+        <a href="#gigs" onclick="toggleMobileMenu()">PALCOS & TOUR</a>
+        <a href="#groove" onclick="toggleMobileMenu()">TECHNO x FUNK</a>
+        <a href="#galeria" onclick="toggleMobileMenu()">GALERIA</a>
+        <a href="#rider" onclick="toggleMobileMenu()">RIDER TÉCNICO</a>
+        <a href="#booking" onclick="toggleMobileMenu()">BOOKING</a>
+        <a href="skilo-beat-machine.html" class="text-[var(--toxic-volt)]">BEAT MACHINE ⚡</a>
+      </div>
+    </nav>
+
+    <header
+      class="relative min-h-screen flex items-center justify-center pt-28 pb-16 overflow-hidden"
+      id="hero-section"
+    >
+      <div
+        class="absolute top-1/4 left-10 w-96 h-96 border-4 border-[var(--industrial-iron)] opacity-20 transform rotate-12"
+      ></div>
+      <div
+        class="absolute bottom-10 right-10 w-64 h-64 border-4 border-[var(--bloodshed-red)] opacity-40 transform -rotate-12 mix-blend-overlay"
+      ></div>
+      <div
+        class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] aspect-square rounded-full border border-[var(--toxic-volt)] opacity-10 animate-[spin_10s_linear_infinite]"
+      ></div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative z-10"
+      >
+        <div class="order-2 md:order-1 flex flex-col items-start space-y-6">
+          <div
+            class="animate-on-load inline-block border-2 border-[var(--toxic-volt)] text-[var(--toxic-volt)] px-3 py-1 text-sm font-bold tracking-widest bg-[var(--void-black)] shadow-[4px_4px_0_var(--toxic-volt)]"
+            style="animation-delay: 0.2s"
+          >
+            DJ / PRODUTOR MUSICAL // SOMMA BOOKING (014)
+          </div>
+
+          <h1
+            class="animate-on-load text-6xl md:text-8xl glitch-text drop-shadow-[8px_8px_0_#34495E]"
+            data-text="140+ BPM. SEM FREIO."
+            style="animation-delay: 0.4s"
+          >
+            <span id="bpm-display">140</span>+ BPM. SEM FREIO.
+          </h1>
+          <h1
+            class="text-6xl md:text-8xl stroke-text"
+            style="-webkit-text-stroke-color: var(--toxic-volt)"
+          >
+            PURA FÚRIA & BASS ACID.
+          </h1>
+          <h1
+            id="scramble-h1"
+            class="animate-on-load text-6xl md:text-8xl text-[var(--toxic-volt)]"
+            style="
+              animation-delay: 0.6s;
+              text-shadow:
+                4px 4px 0px #000,
+                0 0 28px rgba(92, 225, 230, 0.35);
+            "
+          >
+            PSY TECHNO, BOUNCE & ACID RAVE.
+          </h1>
+
+          <!-- Genre Cycling Slot Machine -->
+          <div
+            class="animate-on-load flex items-center gap-4 w-full max-w-md"
+            style="animation-delay: 0.75s"
+          >
+            <div class="h-px flex-1 bg-zinc-800"></div>
+            <div class="relative h-9 overflow-hidden">
+              <div
+                id="genreSlot"
+                class="flex flex-col"
+                style="
+                  transition: transform 0.45s cubic-bezier(0.87, 0, 0.13, 1);
+                "
+              >
+                <span
+                  class="h-9 flex items-center font-display text-[1.7rem] text-[var(--frenzy-gold)]"
+                  >PSY TECHNO</span
+                >
+                <span
+                  class="h-9 flex items-center font-display text-[1.7rem] text-[var(--bloodshed-red)]"
+                  >ACID BOUNCE</span
+                >
+                <span
+                  class="h-9 flex items-center font-display text-[1.7rem] text-[var(--toxic-volt)]"
+                  >HARD TEK</span
+                >
+                <span
+                  class="h-9 flex items-center font-display text-[1.7rem] text-white"
+                  >FULL ON TRANCE</span
+                >
+                <span
+                  class="h-9 flex items-center font-display text-[1.7rem] text-[var(--frenzy-gold)]"
+                  >VOID BREAKER</span
+                >
+                <span
+                  class="h-9 flex items-center font-display text-[1.7rem] text-[var(--bloodshed-red)]"
+                  >PSY BOUNCE</span
+                >
+                <span
+                  class="h-9 flex items-center font-display text-[1.7rem] text-[var(--toxic-volt)]"
+                  >GABBER X FUNK</span
+                >
+                <!-- duplicate first item para loop contínuo -->
+                <span
+                  class="h-9 flex items-center font-display text-[1.7rem] text-[var(--frenzy-gold)]"
+                  >PSY TECHNO</span
+                >
+              </div>
+            </div>
+            <div class="h-px flex-1 bg-zinc-800"></div>
+          </div>
+
+          <p
+            class="animate-on-load text-lg md:text-xl max-w-md border-l-4 border-[var(--frenzy-gold)] pl-4 leading-relaxed bg-black/50 p-2"
+            style="animation-delay: 0.9s"
+          >
+            Giovanni Ramos Garcia não escolheu a pista — a pista o escolheu. Do
+            Psy Trance ao Techno pesado, do Bounce ao Funk de rua: SkiloFrenikhz
+            é a síntese de tudo que não tem freio.
+          </p>
+
+          <div
+            class="animate-on-load pt-4 flex flex-wrap gap-4 items-center"
+            style="animation-delay: 1s"
+          >
+            <a
+              href="#booking"
+              class="btn-brutal text-3xl"
+              onmouseenter="triggerFlash()"
+              >SOLICITAR BOOKING</a
+            >
+            <!-- EQ Live Display -->
+            <div
+              class="flex items-end gap-1.5 h-14 px-3 border-2 border-zinc-700 bg-black/80"
+            >
+              <div class="w-2 bg-[var(--toxic-volt)] eq-bar"></div>
+              <div class="w-2 bg-[var(--frenzy-gold)] eq-bar"></div>
+              <div class="w-2 bg-[var(--bloodshed-red)] eq-bar"></div>
+              <div class="w-2 bg-[var(--toxic-volt)] eq-bar"></div>
+              <div class="w-2 bg-white eq-bar"></div>
+            </div>
+          </div>
+
+          <!-- Mascot State Quote -->
+          <div
+            class="text-sm font-mono text-zinc-500 border border-zinc-800 p-3 bg-zinc-950/60 flex items-center gap-3 max-w-md w-full"
+          >
+            <span class="text-[var(--toxic-volt)] font-bold shrink-0"
+              >ESTADO:</span
+            >
+            <span id="mascotQuoteText" class="text-white italic truncate"
+              >"Fones no talo, mente acelerada!"</span
+            >
+          </div>
+        </div>
+
+        <div class="order-1 md:order-2 relative z-20 flex justify-center">
+          <div
+            class="absolute inset-0 bg-[var(--toxic-volt)] rounded-full blur-[100px] opacity-20 animate-pulse pointer-events-none"
+          ></div>
+
+          <!-- 3D Mascot Card System -->
+          <!-- Aura Rings + Energy Text (ativam no click) -->
+          <div class="aura-ring" id="auraRing1"></div>
+          <div class="aura-ring" id="auraRing2"></div>
+          <div class="aura-ring" id="auraRing3"></div>
+          <div class="energy-wav" id="energyWav">SKILOFRENIKHZ.WAV ⚡</div>
+
+          <div
+            id="mascotWrapper"
+            class="mascot-container animate-on-load relative w-full max-w-[480px] select-none pb-16"
+            style="animation-delay: 0.5s"
+            onmousemove="handleMascotMove(event)"
+            onmouseleave="resetMascotMove()"
+            ontouchmove="handleTouchMove(event)"
+            ontouchend="resetMascotMove()"
+            onclick="triggerMascotClickEffect()"
+          >
+            <!-- Floating Badge -->
+            <div
+              id="mascotBadge"
+              class="absolute -top-3 right-4 bg-[var(--bloodshed-red)] text-white font-display text-xl px-3 py-0.5 border-2 border-black z-30 transform rotate-6 shadow-[4px_4px_0_#fff] transition-transform duration-150"
+            >
+              140 BPM // NÃO ALIMENTE O ESQUILO
+            </div>
+
+            <!-- Spark Icons -->
+            <div
+              class="absolute -left-5 top-1/3 text-2xl spark-icon pointer-events-none z-30"
+            >
+              ⚡
+            </div>
+            <div
+              class="absolute -right-4 bottom-1/3 text-xl spark-icon pointer-events-none z-30"
+              style="animation-delay: 0.7s"
+            >
+              ⚡
+            </div>
+
+            <!-- Main Card with 3D Tilt -->
+            <div
+              id="mascotCard"
+              class="mascot-card border-4 border-white bg-zinc-950 p-4 shadow-[12px_12px_0_#5CE1E6] relative"
+            >
+              <div
+                class="fallback-wrapper overflow-hidden border-2 border-[var(--industrial-iron)] bg-black/90 min-h-[380px] flex items-center justify-center relative"
+              >
+                <!-- Radar ping ring -->
+                <div
+                  class="absolute inset-0 border border-[var(--toxic-volt)] opacity-15 rounded-full scale-90 animate-ping pointer-events-none"
+                ></div>
+
+                <img
+                  id="mascotImg"
+                  src="assets/img/persona.png"
+                  alt="Skilofrenikhz Mascot"
+                  class="asset-img drop-shadow-[15px_15px_0_#000]"
+                  onerror="
+                    this.style.display = 'none';
+                    this.nextElementSibling.style.display = 'flex';
+                  "
+                />
+
+                <div class="image-fallback !min-h-[380px]">
+                  [ MASCOT DATA MISSING ]<br />
+                  <span class="text-xl mt-4 text-white"
+                    >Insert "persona.png" in directory</span
+                  >
+                </div>
+
+                <!-- NÃO ALIMENTO O SKILO hover reveal -->
+                <div class="nos-overlay">
+                  <span class="nos-emoji">🌰</span>
+                  <span class="nos-text">NÃO<br>ALIMENTO<br>O SKILO</span>
+                </div>
+              </div>
+
+              <!-- Status bar -->
+              <div
+                class="mt-3 flex justify-between items-center text-xs text-zinc-500 font-mono border-t border-zinc-800 pt-3"
+              >
+                <span
+                  >STATUS:
+                  <strong class="text-[var(--toxic-volt)]" id="mascotStatus"
+                    >ONLINE</strong
+                  ></span
+                >
+                <span>COORD: <span id="coordDisplay">X:0 Y:0</span></span>
+              </div>
+            </div>
+
+            <!-- Speech Bubble -->
+            <div id="speechBubble" class="speech-bubble">
+              💬 "140 BPM. SEM FREIO."
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div
+      class="marquee-container transform -rotate-1 scale-105 shadow-[0_0_30px_rgba(92,225,230,0.2)] relative z-20 my-8"
+    >
+      <div class="marquee-content">
+        /// PSY TECHNO /// UNISTALLAR FESTIVAL /// PSY CUESTA BOTUCATU /// ONE
+        ENTERTAINMENT RESIDENCY /// FESTIVAL MARACATU 2026 /// SOMMA /// MAD
+        MATH MENTORSHIP /// 140+ BPM /// /// PSY TECHNO /// UNISTALLAR FESTIVAL
+        /// PSY CUESTA BOTUCATU /// ONE ENTERTAINMENT RESIDENCY /// FESTIVAL
+        MARACATU 2026 /// SOMMA /// MAD MATH MENTORSHIP /// 140+ BPM ///
+      </div>
+    </div>
+
+    <section id="manifesto" class="py-24 relative">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="border-4 border-[var(--chrome-white)] bg-black p-1">
+          <div
+            class="border-2 border-[var(--industrial-iron)] p-8 md:p-12 relative overflow-hidden"
+          >
+            <div
+              class="absolute top-0 left-0 w-8 h-8 border-t-4 border-l-4 border-[var(--toxic-volt)]"
+            ></div>
+            <div
+              class="absolute bottom-0 right-0 w-8 h-8 border-b-4 border-r-4 border-[var(--toxic-volt)]"
+            ></div>
+
+            <h2 class="text-5xl md:text-7xl mb-8 text-[var(--bloodshed-red)]">
+              O MANIFESTO DA MARCA_
+            </h2>
+            <div class="space-y-6 text-lg md:text-xl text-gray-300">
+              <p class="flex gap-4">
+                <span class="text-[var(--toxic-volt)]">&gt;</span>
+                "A pista de dança não é um lugar para recato; é um território de
+                transe, alta voltagem e libertação física."
+              </p>
+              <p class="flex gap-4">
+                <span class="text-[var(--toxic-volt)]">&gt;</span>
+                SkiloFrenikhz nasce da colisão entre a psicodelia do Psy Trance
+                e a crueza do Techno underground — dois mundos que não deveriam
+                se tocar, mas que quando colidem geram algo impossível de
+                conter.
+              </p>
+              <p class="flex gap-4">
+                <span class="text-[var(--toxic-volt)]">&gt;</span>
+                140+ BPM não é só uma marcação de metrônomo. É uma declaração de
+                intenção. Cada set é uma onda de choque construída para quem não
+                veio à pista para ficar parado.
+              </p>
+              <div
+                class="pt-8 border-t-2 border-dashed border-[var(--industrial-iron)] mt-8 flex justify-between items-center flex-wrap gap-4"
+              >
+                <span class="text-[var(--frenzy-gold)] blink-cursor font-bold"
+                  >STATUS: UNTAMED_</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="dna"
+      class="py-20 bg-[var(--void-black)] relative z-10 border-t-4 border-white"
+    >
+      <div
+        class="absolute inset-0 opacity-10"
+        style="
+          background-image: radial-gradient(
+            var(--chrome-white) 2px,
+            transparent 2px
+          );
+          background-size: 30px 30px;
+        "
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 relative z-10">
+        <h2
+          class="text-7xl md:text-9xl mb-16 text-center glitch-text"
+          data-text="O MOTOR DA PSICODELIA"
+        >
+          O MOTOR DA PSICODELIA
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div
+            class="card-arsenal group cursor-pointer"
+            onclick="triggerFlash()"
+          >
+            <div
+              class="absolute top-2 right-2 bg-[var(--toxic-volt)] text-black font-display text-2xl px-3 border-2 border-black z-20 transform -rotate-3"
+            >
+              RAIZ_01
+            </div>
+            <div
+              class="h-48 bg-[#1a1a1a] mb-6 flex items-center justify-center border-2 border-[var(--industrial-iron)] overflow-hidden relative"
+            >
+              <div
+                class="w-full h-full flex items-center justify-center p-6 text-center"
+              >
+                <span class="font-display text-4xl text-[var(--toxic-volt)]"
+                  >PSY TRANCE x TECHNO</span
+                >
+              </div>
+            </div>
+            <h3 class="text-4xl mb-2 text-[var(--chrome-white)]">
+              NASCIDO DO PSY, FORJADO NO TECHNO
+            </h3>
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">
+              O encontro de dois mundos hoje já é realidade, a cena do Psy Techno vem crescendo muito e o Skilo faz parte dessa atmosfera densa, séria, intensa e psicodélica.
+            </p>
+            <div class="text-[var(--toxic-volt)] font-bold text-xl">
+              STATUS: RAVE READY
+            </div>
+          </div>
+
+          <div
+            id="groove"
+            class="card-arsenal group cursor-pointer"
+            onclick="triggerFlash()"
+          >
+            <div
+              class="absolute top-2 right-2 bg-[var(--bloodshed-red)] text-white font-display text-2xl px-3 border-2 border-black z-20 transform rotate-3"
+            >
+              RAIZ_02
+            </div>
+            <div
+              class="h-48 bg-[#1a1a1a] mb-6 flex items-center justify-center border-2 border-[var(--industrial-iron)] overflow-hidden relative"
+            >
+              <div
+                class="w-full h-full flex items-center justify-center p-6 text-center"
+              >
+                <span class="font-display text-4xl text-[var(--bloodshed-red)]"
+                  >HARDCORE GABBER x FUNK BR</span
+                >
+              </div>
+            </div>
+            <h3 class="text-4xl mb-2 text-[var(--chrome-white)]">
+              TECHNO x FUNK: O GROOVE DA CONTRACULTURA
+            </h3>
+            <p class="text-gray-300 text-lg leading-relaxed mb-6">
+              O Bounce nasceu nas entranhas do Hardcore Gabber — extrovertido,
+              agressivo, físico. Skilo enxergou o que poucos enxergaram: que o
+              Bounce e o Funk brasileiro falam a mesma língua da contracultura.
+              A fusão não foi calculada — foi inevitável. É o som de quem vive a
+              periferia e a pista com a mesma intensidade.
+            </p>
+            <div class="text-[var(--bloodshed-red)] font-bold text-xl">
+              STATUS: HIGH ENERGY
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="tracks"
+      class="py-20 bg-black relative border-t-4 border-white"
+    >
+      <div class="max-w-4xl mx-auto px-4">
+        <h2
+          class="text-6xl md:text-8xl mb-12 text-center glitch-text"
+          data-text="SONIC ARSENAL_"
+        >
+          SONIC ARSENAL_
+        </h2>
+
+        <div
+          class="card-arsenal border-4 border-[var(--toxic-volt)] bg-zinc-950 p-6 md:p-8"
+        >
+          <div
+            class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 pb-6 border-b-2 border-zinc-800"
+          >
+            <div>
+              <div
+                class="text-[var(--toxic-volt)] text-sm font-bold tracking-widest mb-1"
+              >
+                TRACK DEMO // 140 BPM
+              </div>
+              <h3 id="trackTitle" class="text-3xl md:text-4xl text-white">
+                SKILOFRENIKHZ - FAIXA 01
+              </h3>
+            </div>
+            <div class="flex gap-2">
+              <button
+                onclick="togglePlay()"
+                id="playBtn"
+                class="btn-brutal text-2xl !py-2 !px-6 bg-[var(--toxic-volt)] text-black shadow-[4px_4px_0_#fff]"
+              >
+                PLAY_
+              </button>
+            </div>
+          </div>
+
+          <div class="space-y-4">
+            <div class="flex justify-between text-sm text-gray-400 font-mono">
+              <span id="currentTime">0:00</span>
+              <span id="duration">3:45</span>
+            </div>
+            <div
+              class="w-full bg-zinc-900 h-4 border-2 border-zinc-700 cursor-pointer relative overflow-hidden"
+              onclick="seekAudio(event)"
+            >
+              <div
+                id="progressBar"
+                class="bg-[var(--toxic-volt)] h-full w-0 transition-all duration-100"
+              ></div>
+            </div>
+          </div>
+
+          <div
+            class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-8 pt-6 border-t-2 border-zinc-800"
+          >
+            <button
+              onclick="switchTrack('FAIXA 01', 140, 'assets/audio/faixa-01.wav')"
+              class="border-2 border-white p-3 text-left hover:bg-[var(--toxic-volt)] hover:text-black font-bold transition-colors"
+            >
+              <div class="text-xs text-gray-400">TRACK 01</div>
+              <div class="text-lg truncate">FAIXA 01</div>
+            </button>
+            <button
+              onclick="switchTrack('FAIXA 02', 140, 'assets/audio/faixa-02.wav')"
+              class="border-2 border-white p-3 text-left hover:bg-[var(--toxic-volt)] hover:text-black font-bold transition-colors"
+            >
+              <div class="text-xs text-gray-400">TRACK 02</div>
+              <div class="text-lg truncate">FAIXA 02</div>
+            </button>
+            <button
+              onclick="switchTrack('FAIXA 03', 140, 'assets/audio/faixa-03.wav')"
+              class="border-2 border-white p-3 text-left hover:bg-[var(--bloodshed-red)] hover:text-white font-bold transition-colors"
+            >
+              <div class="text-xs text-gray-400">TRACK 03</div>
+              <div class="text-lg truncate">FAIXA 03</div>
+            </button>
+            <button
+              onclick="switchTrack('FAIXA 04', 140, 'assets/audio/faixa-04.wav')"
+              class="border-2 border-white p-3 text-left hover:bg-[var(--frenzy-gold)] hover:text-black font-bold transition-colors"
+            >
+              <div class="text-xs text-gray-400">TRACK 04</div>
+              <div class="text-lg truncate">FAIXA 04</div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="gigs"
+      class="py-20 relative z-10 border-t-4 border-white bg-[var(--void-black)]"
+    >
+      <div class="max-w-7xl mx-auto px-4">
+        <h2
+          class="text-7xl md:text-9xl mb-16 text-center glitch-text"
+          data-text="PALCOS & MARCOS"
+        >
+          PALCOS & MARCOS
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="card-arsenal">
+            <div class="text-[var(--frenzy-gold)] font-display text-3xl mb-2">
+              UNISTALLAR
+            </div>
+            <p class="text-gray-300 mb-4">
+              Skilo ocupou um dos palcos da maior estrutura Psy Trance do
+              interior paulista. Dois palcos, duas vertentes, uma presença que
+              não passou em branco.
+            </p>
+            <span class="text-sm border border-white px-2 py-1 uppercase"
+              >Paranapanema — SP</span
+            >
+          </div>
+
+          <div class="card-arsenal">
+            <div class="text-[var(--toxic-volt)] font-display text-3xl mb-2">
+              PSY CUESTA
+            </div>
+            <p class="text-gray-300 mb-4">
+              Skilo chegou na Psy Cuesta com um warm up de gente grande, criando uma atmosfera perfeita ao som do psy techno.
+            </p>
+            <span class="text-sm border border-white px-2 py-1 uppercase"
+              >Botucatu — SP</span
+            >
+          </div>
+
+          <div class="card-arsenal">
+            <div class="text-[var(--bloodshed-red)] font-display text-3xl mb-2">
+              FESTIVAL MARACATU '26
+            </div>
+            <p class="text-gray-300 mb-4">
+              No Carnaval de 2026, Skilo levou o Bounce para um festival de
+              raiz. O que aconteceu foi um curto-circuito cultural — e a pista
+              pediu mais.
+            </p>
+            <span class="text-sm border border-white px-2 py-1 uppercase"
+              >Carnaval 2026</span
+            >
+          </div>
+        </div>
+
+        <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="card-arsenal border-l-8 border-l-[var(--toxic-volt)]">
+            <h3 class="text-3xl mb-2 text-white">RESIDÊNCIA OFICIAL</h3>
+            <p class="text-gray-300 text-lg">
+              Residente fixo das festas da <strong>One Entertainment</strong>.
+              Cada edição é um laboratório — e a pista sempre sai diferente.
+            </p>
+          </div>
+          <div class="card-arsenal border-l-8 border-l-[var(--frenzy-gold)]">
+            <h3 class="text-3xl mb-2 text-white">BOOKING & AGENCIAMENTO</h3>
+            <p class="text-gray-300 text-lg">
+              Skilo é agenciado pela <strong>Somma</strong> e tem na
+              figura de <strong>Mad Math</strong> — DJ e produtor referência —
+              um parceiro direto no desenvolvimento de sets e produções. Dois
+              nomes por trás de um projeto em rota de crescimento.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="galeria"
+      class="py-20 bg-black border-t-4 border-white overflow-hidden"
+    >
+      <div class="max-w-7xl mx-auto px-4 mb-12">
+        <h2
+          class="text-7xl md:text-9xl text-center glitch-text"
+          data-text="REGISTROS DA PISTA"
+        >
+          REGISTROS DA PISTA
+        </h2>
+      </div>
+
+      <div class="swiper gallerySwiper px-4 max-w-7xl mx-auto pb-16">
+        <div class="swiper-wrapper">
+          <!-- Slide 1: Giovanni — Foto Oficial -->
+          <div class="swiper-slide card-arsenal !p-2">
+            <div
+              class="fallback-wrapper !min-h-[350px] relative overflow-hidden"
+            >
+              <img
+                src="assets/img/profile/foto-gi.png"
+                alt="Giovanni Ramos Garcia — SkiloFrenikhz"
+                class="gallery-image object-cover"
+                loading="lazy"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <div class="image-fallback !min-h-[350px]">
+                [ GIOVANNI RAMOS GARCIA ]
+              </div>
+              <!-- Caption overlay -->
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent px-4 py-5 pointer-events-none"
+              >
+                <span
+                  class="font-display text-xl text-[var(--toxic-volt)] block"
+                  >GIOVANNI RAMOS GARCIA</span
+                >
+                <span class="font-mono text-xs text-zinc-400"
+                  >SKILOFRENIKHZ // DJ & PRODUTOR</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 2: Giovanni na Cabine -->
+          <div class="swiper-slide card-arsenal !p-2">
+            <div
+              class="fallback-wrapper !min-h-[350px] relative overflow-hidden"
+            >
+              <img
+                src="assets/img/profile/foto-gi-tocando.png"
+                alt="SkiloFrenikhz — Live Performance"
+                class="gallery-image object-cover"
+                loading="lazy"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <div class="image-fallback !min-h-[350px]">
+                [ LIVE PERFORMANCE ]
+              </div>
+              <!-- Caption overlay -->
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent px-4 py-5 pointer-events-none"
+              >
+                <span
+                  class="font-display text-xl text-[var(--frenzy-gold)] block"
+                  >LIVE @ PISTA</span
+                >
+                <span class="font-mono text-xs text-zinc-400"
+                  >140+ BPM // NA CABINE</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 3: Unistellar 01 -->
+          <div class="swiper-slide card-arsenal !p-2">
+            <div
+              class="fallback-wrapper !min-h-[350px] relative overflow-hidden"
+            >
+              <img
+                src="assets/img/gallery/unistellar-3640.jpg"
+                alt="SkiloFrenikhz — Unistellar Festival"
+                class="gallery-image object-cover"
+                loading="lazy"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <div class="image-fallback !min-h-[350px]">[ UNISTELLAR FESTIVAL ]</div>
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent px-4 py-5 pointer-events-none"
+              >
+                <span
+                  class="font-display text-xl text-[var(--frenzy-gold)] block"
+                  >UNISTELLAR FESTIVAL</span
+                >
+                <span class="font-mono text-xs text-zinc-400"
+                  >PARANAPANEMA — SP</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 4: Unistellar 02 -->
+          <div class="swiper-slide card-arsenal !p-2">
+            <div
+              class="fallback-wrapper !min-h-[350px] relative overflow-hidden"
+            >
+              <img
+                src="assets/img/gallery/unistellar-3674.jpg"
+                alt="SkiloFrenikhz — Unistellar Festival"
+                class="gallery-image object-cover"
+                loading="lazy"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <div class="image-fallback !min-h-[350px]">[ UNISTELLAR FESTIVAL ]</div>
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent px-4 py-5 pointer-events-none"
+              >
+                <span
+                  class="font-display text-xl text-[var(--bloodshed-red)] block"
+                  >UNISTELLAR FESTIVAL</span
+                >
+                <span class="font-mono text-xs text-zinc-400"
+                  >PARANAPANEMA — SP</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 5: Unistellar 03 -->
+          <div class="swiper-slide card-arsenal !p-2">
+            <div
+              class="fallback-wrapper !min-h-[350px] relative overflow-hidden"
+            >
+              <img
+                src="assets/img/gallery/unistellar-3687.jpg"
+                alt="SkiloFrenikhz — Unistellar Festival"
+                class="gallery-image object-cover"
+                loading="lazy"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <div class="image-fallback !min-h-[350px]">[ UNISTELLAR FESTIVAL ]</div>
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent px-4 py-5 pointer-events-none"
+              >
+                <span class="font-display text-xl text-[var(--toxic-volt)] block">UNISTELLAR FESTIVAL</span>
+                <span class="font-mono text-xs text-zinc-400">PARANAPANEMA — SP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 6: Unistellar 04 -->
+          <div class="swiper-slide card-arsenal !p-2">
+            <div
+              class="fallback-wrapper !min-h-[350px] relative overflow-hidden"
+            >
+              <img
+                src="assets/img/gallery/unistellar-3693.jpg"
+                alt="SkiloFrenikhz — Unistellar Festival"
+                class="gallery-image object-cover"
+                loading="lazy"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <div class="image-fallback !min-h-[350px]">[ UNISTELLAR FESTIVAL ]</div>
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent px-4 py-5 pointer-events-none"
+              >
+                <span class="font-display text-xl text-[var(--frenzy-gold)] block">UNISTELLAR FESTIVAL</span>
+                <span class="font-mono text-xs text-zinc-400">PARANAPANEMA — SP</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Slide 7: Unistellar 05 -->
+          <div class="swiper-slide card-arsenal !p-2">
+            <div
+              class="fallback-wrapper !min-h-[350px] relative overflow-hidden"
+            >
+              <img
+                src="assets/img/gallery/unistellar-3749.jpg"
+                alt="SkiloFrenikhz — Unistellar Festival"
+                class="gallery-image object-cover"
+                loading="lazy"
+                onerror="
+                  this.style.display = 'none';
+                  this.nextElementSibling.style.display = 'flex';
+                "
+              />
+              <div class="image-fallback !min-h-[350px]">[ UNISTELLAR FESTIVAL ]</div>
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/90 to-transparent px-4 py-5 pointer-events-none"
+              >
+                <span class="font-display text-xl text-[var(--bloodshed-red)] block">UNISTELLAR FESTIVAL</span>
+                <span class="font-mono text-xs text-zinc-400">PARANAPANEMA — SP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination mt-8"></div>
+      </div>
+    </section>
+
+    <section
+      id="rider"
+      class="py-20 bg-[var(--void-black)] border-t-4 border-white"
+    >
+      <div class="max-w-5xl mx-auto px-4">
+        <h2
+          class="text-7xl md:text-9xl mb-12 text-center glitch-text"
+          data-text="RIDER TÉCNICO_"
+        >
+          RIDER TÉCNICO_
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="card-arsenal">
+            <h3 class="text-3xl text-[var(--toxic-volt)] mb-4">
+              PLAYERS & MIXER
+            </h3>
+            <ul class="space-y-3 text-gray-300">
+              <li>
+                > 3x CDJ Pioneer Nexus 2 ou CDJ 3000 (Firmware atualizado)
+              </li>
+              <li>> 1x Mixer Pioneer DJM 900 Nexus 2 ou V10</li>
+              <li>> Conexão Ethernet funcional entre os CDJs</li>
+              <li>> Cabos RCA de alta qualidade em perfeito estado</li>
+            </ul>
+          </div>
+          <div class="card-arsenal">
+            <h3 class="text-3xl text-[var(--frenzy-gold)] mb-4">
+              MONITORAMENTO & CABINE
+            </h3>
+            <ul class="space-y-3 text-gray-300">
+              <li>
+                > 2x Retornos de palco ativos (Pioneer/QSC/JBL) de alta potência
+                direcionados à cabine
+              </li>
+              <li>> Mesa estável e nivelada com tapete antiderrapante</li>
+              <li>
+                > Iluminação de cabine adequada para leitura de pen drives
+              </li>
+              <li>> Atendimento imediato do técnico de som do festival</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <button
+            onclick="
+              openModal('PDF DO RIDER TÉCNICO SOLICITADO. BAIXANDO ARQUIVO...')
+            "
+            class="btn-brutal text-2xl"
+          >
+            BAIXAR RIDER COMPLETO (PDF)
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION: Press Kit & Assets -->
+    <section
+      id="presskit"
+      class="py-24 bg-gradient-to-b from-[var(--void-black)] via-neutral-950 to-black relative z-10 border-t-4 border-[var(--toxic-volt)] overflow-hidden"
+    >
+      <div
+        class="absolute -left-20 top-1/2 w-96 h-96 bg-[var(--toxic-volt)] opacity-5 blur-[120px] pointer-events-none"
+      ></div>
+      <div
+        class="absolute -right-20 bottom-10 w-96 h-96 bg-[var(--bloodshed-red)] opacity-5 blur-[120px] pointer-events-none"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-4 relative z-10">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-16 border-b-2 border-neutral-800 pb-8"
+        >
+          <div>
+            <span
+              class="text-[var(--toxic-volt)] font-mono text-sm tracking-widest uppercase block mb-2"
+              >[ RECURSOS OFICIAIS & IMPRENSA ]</span
+            >
+            <h2
+              class="text-6xl md:text-9xl glitch-text"
+              data-text="PRESS KIT & ASSETS"
+            >
+              PRESS KIT & ASSETS
+            </h2>
+          </div>
+          <p
+            class="text-gray-400 max-w-md text-right md:text-right text-sm md:text-base mt-4 md:mt-0 font-mono"
+          >
+            Baixe o pacote completo com logos em alta resolução, rider técnico
+            oficial, fotos de imprensa em HD e release institucional.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card 1: Press Kit PDF -->
+          <div
+            class="card-arsenal border-2 border-white hover:border-[var(--toxic-volt)] group transition-all duration-300"
+          >
+            <div class="flex justify-between items-start mb-6">
+              <span
+                class="bg-[var(--toxic-volt)] text-black px-3 py-1 font-display text-xl"
+                >ZIP / PDF</span
+              >
+              <span class="text-xs text-gray-400 font-mono">14.2 MB</span>
+            </div>
+            <div
+              class="h-32 bg-neutral-900 border border-neutral-800 mb-6 flex items-center justify-center group-hover:bg-[var(--toxic-volt)]/10 transition-colors"
+            >
+              <span
+                class="font-display text-4xl text-[var(--toxic-volt)] group-hover:scale-110 transition-transform"
+                >[ ZIP // PDF ] PRESS KIT</span
+              >
+            </div>
+            <h3 class="text-3xl text-white mb-2">DOSSIÊ & RELEASE OFICIAL</h3>
+            <p class="text-gray-400 text-sm mb-6">
+              Histórico, biografia atualizada, riders, mapa de palco e
+              diretrizes de identidade visual.
+            </p>
+            <button
+              onclick="
+                window.open(
+                  'https://drive.google.com/drive/folders/10euPtPkzGkMTZVhorQOgCI3Wo-bgsx9f',
+                  '_blank',
+                )
+              "
+              class="btn-brutal w-full text-center text-2xl !bg-[var(--toxic-volt)] !text-black !border-black shadow-[4px_4px_0_#FFFFFF]"
+            >
+              BAIXAR PACOTE (ZIP) ➔
+            </button>
+          </div>
+
+          <!-- Card 2: Hi-Res Logo & Photos -->
+          <div
+            class="card-arsenal border-2 border-white hover:border-[var(--frenzy-gold)] group transition-all duration-300"
+          >
+            <div class="flex justify-between items-start mb-6">
+              <span
+                class="bg-[var(--frenzy-gold)] text-black px-3 py-1 font-display text-xl"
+                >PNG / VETOR</span
+              >
+              <span class="text-xs text-gray-400 font-mono">28.5 MB</span>
+            </div>
+            <div
+              class="h-32 bg-neutral-900 border border-neutral-800 mb-6 flex items-center justify-center group-hover:bg-[var(--frenzy-gold)]/10 transition-colors"
+            >
+              <span
+                class="font-display text-4xl text-[var(--frenzy-gold)] group-hover:scale-110 transition-transform"
+                >[ PNG // VEC ] LOGOS</span
+              >
+            </div>
+            <h3 class="text-3xl text-white mb-2">ASSETS VISUAIS & LOGOS</h3>
+            <p class="text-gray-400 text-sm mb-6">
+              Logotipo oficial em alta resolução, variações de cor e ilustrações
+              do mascote em PNG transparente.
+            </p>
+            <button
+              onclick="
+                window.open(
+                  'https://drive.google.com/drive/folders/10euPtPkzGkMTZVhorQOgCI3Wo-bgsx9f',
+                  '_blank',
+                )
+              "
+              class="btn-brutal w-full text-center text-2xl !bg-[var(--frenzy-gold)] !text-black !border-black shadow-[4px_4px_0_#FFFFFF]"
+            >
+              BAIXAR ASSETS (ZIP) ➔
+            </button>
+          </div>
+
+          <!-- Card 3: Promo Rider / Technical Info -->
+          <div
+            class="card-arsenal border-2 border-white hover:border-[var(--bloodshed-red)] group transition-all duration-300"
+          >
+            <div class="flex justify-between items-start mb-6">
+              <span
+                class="bg-[var(--bloodshed-red)] text-white px-3 py-1 font-display text-xl"
+                >PDF</span
+              >
+              <span class="text-xs text-gray-400 font-mono">4.1 MB</span>
+            </div>
+            <div
+              class="h-32 bg-neutral-900 border border-neutral-800 mb-6 flex items-center justify-center group-hover:bg-[var(--bloodshed-red)]/10 transition-colors"
+            >
+              <span
+                class="font-display text-4xl text-[var(--bloodshed-red)] group-hover:scale-110 transition-transform"
+                >[ PDF // TXT ] RIDER</span
+              >
+            </div>
+            <h3 class="text-3xl text-white mb-2">MAPA DE CABINE & SOM</h3>
+            <p class="text-gray-400 text-sm mb-6">
+              Ficha técnica detalhada para palcos, exigências de áudio, CDJs e
+              mapa de palco oficial.
+            </p>
+            <button
+              onclick="
+                window.open(
+                  'https://drive.google.com/drive/folders/10euPtPkzGkMTZVhorQOgCI3Wo-bgsx9f',
+                  '_blank',
+                )
+              "
+              class="btn-brutal w-full text-center text-2xl !bg-[var(--bloodshed-red)] !text-white !border-black shadow-[4px_4px_0_#FFFFFF]"
+            >
+              BAIXAR RIDER (PDF) ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- Micro-interaction interactive preview banner -->
+        <div
+          class="mt-12 p-6 border-2 border-dashed border-neutral-700 flex flex-col md:flex-row items-center justify-between gap-6 bg-neutral-950"
+        >
+          <div class="flex items-center gap-4">
+            <div
+              class="w-4 h-4 bg-[var(--toxic-volt)] rounded-full animate-ping"
+            ></div>
+            <div>
+              <h4 class="text-2xl text-white font-display uppercase">
+                PRECISA DE MATERIAL ESPECÍFICO OU IMPRENSA?
+              </h4>
+              <p class="text-sm text-gray-400 font-mono">
+                Entre em contato direto com a equipe de booking (Somma)
+                para demandas customizadas.
+              </p>
+            </div>
+          </div>
+          <a
+            href="#booking"
+            class="btn-brutal text-xl !bg-transparent !text-white !border-white hover:!bg-white hover:!text-black"
+          >
+            FALAR COM BOOKING
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: Booking & Footer -->
+    <footer
+      id="booking"
+      class="bg-[var(--chrome-white)] text-[var(--void-black)] pt-20 pb-16 border-t-8 border-[var(--bloodshed-red)] mt-20 relative overflow-hidden"
+    >
+      <div
+        class="absolute -right-20 -bottom-20 text-[22rem] font-display opacity-5 pointer-events-none transform -rotate-12 leading-none"
+      >
+        SKF
+      </div>
+
+      <div
+        class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-12 relative z-10"
+      >
+        <!-- Footer Column 1: Interactive WhatsApp Booking Builder -->
+        <div
+          class="bg-black text-white p-8 md:p-10 border-4 border-black shadow-[10px_10px_0_#5CE1E6]"
+        >
+          <div
+            class="inline-block bg-[var(--toxic-volt)] text-black font-display text-xl px-3 py-1 mb-4"
+          >
+            WHATSAPP DIRECT BOOKING // 014
+          </div>
+          <h2 class="text-5xl md:text-6xl mb-4 text-white">
+            CONVOQUE O <span class="text-[var(--bloodshed-red)]">CAOS</span>
+          </h2>
+          <p class="text-gray-300 mb-6 text-sm md:text-base">
+            Monte sua proposta abaixo. O sistema criará a mensagem pronta e
+            abrirá o WhatsApp oficial de agendamento (Giovanni Ramos — Somma).
+          </p>
+
+          <div class="space-y-4 font-mono text-sm">
+            <div>
+              <label class="block text-[var(--toxic-volt)] mb-1 font-bold"
+                >SEU NOME / RESPONSÁVEL:</label
+              >
+              <input
+                type="text"
+                id="bkName"
+                placeholder="Ex: Lucas / Produtora X"
+                class="w-full bg-neutral-900 border-2 border-white p-3 text-white focus:outline-none focus:border-[var(--toxic-volt)] font-mono"
+              />
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[var(--toxic-volt)] mb-1 font-bold"
+                  >CIDADE / REGIÃO:</label
+                >
+                <input
+                  type="text"
+                  id="bkCity"
+                  placeholder="Ex: Botucatu - SP"
+                  class="w-full bg-neutral-900 border-2 border-white p-3 text-white focus:outline-none focus:border-[var(--toxic-volt)] font-mono"
+                />
+              </div>
+              <div>
+                <label class="block text-[var(--toxic-volt)] mb-1 font-bold"
+                  >DATA PREVISTA:</label
+                >
+                <input
+                  type="text"
+                  id="bkDate"
+                  placeholder="Ex: 15/10/2026"
+                  class="w-full bg-neutral-900 border-2 border-white p-3 text-white focus:outline-none focus:border-[var(--toxic-volt)] font-mono"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-[var(--toxic-volt)] mb-1 font-bold"
+                >TIPO DE EVENTO / PALCO:</label
+              >
+              <select
+                id="bkType"
+                class="w-full bg-neutral-900 border-2 border-white p-3 text-white focus:outline-none focus:border-[var(--toxic-volt)] font-mono"
+              >
+                <option value="Festival Open-Air (140+ BPM)">
+                  Festival Open-Air (140+ BPM)
+                </option>
+                <option value="Clube / Underground Rave">
+                  Clube / Underground Rave
+                </option>
+                <option value="Residência / Noite de Bass">
+                  Residência / Noite de Bass
+                </option>
+                <option value="Outro formato">Outro formato</option>
+              </select>
+            </div>
+
+            <!-- Live preview box of the message -->
+            <div
+              class="bg-neutral-900 border border-[var(--industrial-iron)] p-3 rounded text-xs text-gray-300 font-mono"
+            >
+              <span class="text-[var(--frenzy-gold)] block font-bold mb-1"
+                >PRÉ-VISUALIZAÇÃO DA MENSAGEM:</span
+              >
+              <p id="msgPreview" class="italic text-white">
+                "Salve, Giovanni! Vim pelo site do SkiloFrenikhz. Sou [Nome] de
+                [Cidade] e gostaria de cotar o projeto para o evento em [Data]
+                ([Tipo]). Vamos trocar ideia?"
+              </p>
+            </div>
+
+            <button
+              type="button"
+              onclick="sendToWhatsApp()"
+              class="btn-brutal w-full text-center text-3xl !bg-[var(--toxic-volt)] !text-black !border-black shadow-[6px_6px_0_#FFFFFF] mt-2"
+            >
+              ENVIAR WHATSAPP DIRETO ➔
+            </button>
+          </div>
+        </div>
+
+        <!-- Footer Column 2: Links & Contact Info -->
+        <div class="flex flex-col justify-between space-y-6">
+          <div>
+            <h2 class="text-6xl md:text-7xl mb-6 text-black">
+              FALA <span class="text-[var(--bloodshed-red)]">DIRETO</span>
+            </h2>
+            <p class="text-xl font-bold mb-8 max-w-md">
+              Booking via Somma. Todas as pontas chegam em Giovanni —
+              rápido, direto, sem intermediário desnecessário.
+            </p>
+          </div>
+
+          <div class="flex flex-col space-y-4 font-bold text-xl uppercase">
+            <div
+              class="border-b-2 border-black pb-3 flex justify-between items-center"
+            >
+              <span>CONTATO DIRETO (WHATS):</span>
+              <span class="text-[var(--bloodshed-red)] font-mono"
+                >+55 43 8854-8143</span
+              >
+            </div>
+            <div
+              class="border-b-2 border-black pb-3 flex justify-between items-center"
+            >
+              <span>RESPONSÁVEL:</span>
+              <span>GIOVANNI RAMOS GARCIA</span>
+            </div>
+            <div
+              class="border-b-2 border-black pb-3 flex justify-between items-center gap-4"
+            >
+              <span>EMAIL:</span>
+              <a
+                href="mailto:projetoskilofrenikhz@gmail.com"
+                class="text-[var(--bloodshed-red)] font-mono text-sm hover:underline transition-all"
+              >
+                projetoskilofrenikhz@gmail.com
+              </a>
+            </div>
+            <div
+              class="border-b-2 border-black pb-3 flex justify-between items-center gap-4 text-sm"
+            >
+              <span>LOCALIZAÇÃO:</span>
+              <span class="font-mono text-xs text-right leading-tight"
+                >Piraju, SP — 18805-004</span
+              >
+            </div>
+            <a
+              href="https://soundcloud.com/skilofrenikhz"
+              target="_blank"
+              class="hover:text-[var(--bloodshed-red)] transition-colors"
+              onclick="triggerFlash()"
+              >> Soundcloud / Sets Oficiais</a
+            >
+            <a
+              href="https://www.instagram.com/skilofrenikhz.wav/"
+              target="_blank"
+              class="hover:text-[var(--bloodshed-red)] transition-colors"
+              onclick="triggerFlash()"
+              >> Instagram @skilofrenikhz.wav</a
+            >
+            <a
+              href="#presskit"
+              class="hover:text-[var(--bloodshed-red)] transition-colors"
+              onclick="
+                triggerFlash();
+                openModal('DOWNLOAD DO PRESS KIT INICIADO.');
+              "
+              >> Baixar Press Kit (PDF)</a
+            >
+            <div
+              class="mt-4 pt-6 border-t-4 border-black text-sm font-mono text-neutral-700"
+            >
+              <p class="mb-1">© 2026 SKILOFRENIKHZ | 140+ BPM · Todos os direitos reservados.</p>
+              <p>Desenvolvido por <strong class="text-black">Claudio Santana</strong></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      // Initialize Swiper Gallery
+      const swiper = new Swiper(".gallerySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 24,
+        loop: true,
+        autoplay: {
+          delay: 3500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
+        },
+      });
+
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("hidden");
+        menu.classList.toggle("flex");
+        triggerFlash();
+      }
+
+      function triggerFlash() {
+        const flash = document.getElementById("electricFlash");
+        flash.classList.add("flash-active");
+        playGlitchSound();
+
+        setTimeout(() => {
+          flash.classList.remove("flash-active");
+          setTimeout(() => {
+            flash.classList.add("flash-active");
+            setTimeout(() => {
+              flash.classList.remove("flash-active");
+            }, 30);
+          }, 50);
+        }, 30);
+      }
+
+      function openModal(message) {
+        document.getElementById("modalMessage").innerText = message;
+        document.getElementById("customModal").classList.add("active");
+        triggerFlash();
+      }
+
+      function closeModal() {
+        document.getElementById("customModal").classList.remove("active");
+      }
+
+      const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+      function playGlitchSound() {
+        if (audioCtx.state === "suspended") audioCtx.resume();
+
+        const oscillator = audioCtx.createOscillator();
+        const gainNode = audioCtx.createGain();
+
+        oscillator.type = "sawtooth";
+        oscillator.frequency.setValueAtTime(140, audioCtx.currentTime);
+        oscillator.frequency.exponentialRampToValueAtTime(
+          0.01,
+          audioCtx.currentTime + 0.08,
+        );
+
+        gainNode.gain.setValueAtTime(0.25, audioCtx.currentTime);
+        gainNode.gain.exponentialRampToValueAtTime(
+          0.001,
+          audioCtx.currentTime + 0.08,
+        );
+
+        oscillator.connect(gainNode);
+        gainNode.connect(audioCtx.destination);
+
+        oscillator.start();
+        oscillator.stop(audioCtx.currentTime + 0.08);
+      }
+
+      // Audio Player
+      const audioPlayer = new Audio('assets/audio/faixa-01.wav');
+      let isPlaying = false;
+
+      audioPlayer.addEventListener('timeupdate', () => {
+        if (!audioPlayer.duration) return;
+        const pct = (audioPlayer.currentTime / audioPlayer.duration) * 100;
+        document.getElementById("progressBar").style.width = pct + "%";
+        const cur = Math.floor(audioPlayer.currentTime);
+        const mins = Math.floor(cur / 60);
+        const secs = cur % 60;
+        document.getElementById("currentTime").innerText =
+          `${mins}:${secs < 10 ? "0" : ""}${secs}`;
+      });
+
+      audioPlayer.addEventListener('loadedmetadata', () => {
+        const dur = Math.floor(audioPlayer.duration);
+        const mins = Math.floor(dur / 60);
+        const secs = dur % 60;
+        document.getElementById("duration").innerText =
+          `${mins}:${secs < 10 ? "0" : ""}${secs}`;
+      });
+
+      audioPlayer.addEventListener('ended', () => {
+        isPlaying = false;
+        const btn = document.getElementById("playBtn");
+        btn.innerText = "PLAY_";
+        btn.classList.remove("bg-[var(--bloodshed-red)]", "text-white");
+        btn.classList.add("bg-[var(--toxic-volt)]");
+        document.getElementById("progressBar").style.width = "0%";
+      });
+
+      function togglePlay() {
+        isPlaying = !isPlaying;
+        const btn = document.getElementById("playBtn");
+        if (isPlaying) {
+          audioPlayer.play();
+          btn.innerText = "PAUSE_";
+          btn.classList.remove("bg-[var(--toxic-volt)]");
+          btn.classList.add("bg-[var(--bloodshed-red)]", "text-white");
+        } else {
+          audioPlayer.pause();
+          btn.innerText = "PLAY_";
+          btn.classList.remove("bg-[var(--bloodshed-red)]", "text-white");
+          btn.classList.add("bg-[var(--toxic-volt)]");
+        }
+        triggerFlash();
+      }
+
+      function switchTrack(title, bpm, src) {
+        const wasPlaying = isPlaying;
+        audioPlayer.pause();
+        audioPlayer.src = src;
+        document.getElementById("trackTitle").innerText =
+          `SKILOFRENIKHZ - ${title} (${bpm} BPM)`;
+        document.getElementById("progressBar").style.width = "0%";
+        document.getElementById("currentTime").innerText = "0:00";
+        if (wasPlaying) {
+          audioPlayer.play();
+        } else {
+          isPlaying = true;
+          const btn = document.getElementById("playBtn");
+          btn.innerText = "PAUSE_";
+          btn.classList.remove("bg-[var(--toxic-volt)]");
+          btn.classList.add("bg-[var(--bloodshed-red)]", "text-white");
+          audioPlayer.play();
+        }
+        triggerFlash();
+      }
+
+      function seekAudio(event) {
+        if (!audioPlayer.duration) return;
+        const rect = event.currentTarget.getBoundingClientRect();
+        const clickX = event.clientX - rect.left;
+        audioPlayer.currentTime = (clickX / rect.width) * audioPlayer.duration;
+        triggerFlash();
+      }
+
+      // --- FORM SCRIPT: Live preview for WhatsApp generator ---
+      const bkName = document.getElementById("bkName");
+      const bkCity = document.getElementById("bkCity");
+      const bkDate = document.getElementById("bkDate");
+      const bkType = document.getElementById("bkType");
+      const msgPreview = document.getElementById("msgPreview");
+
+      function updatePreview() {
+        const name = bkName.value.trim() || "[Seu Nome]";
+        const city = bkCity.value.trim() || "[Sua Cidade]";
+        const date = bkDate.value.trim() || "[Data do Evento]";
+        const type = bkType.value;
+
+        const text = `"Salve, Giovanni! Vim pelo site do SkiloFrenikhz. Sou ${name} de ${city} e gostaria de cotar o projeto para um ${type} em ${date}. Vamos trocar ideia?"`;
+        if (msgPreview) {
+          msgPreview.innerText = text;
+        }
+      }
+
+      if (bkName) {
+        [bkName, bkCity, bkDate, bkType].forEach((el) => {
+          el.addEventListener("input", updatePreview);
+          el.addEventListener("change", updatePreview);
+        });
+      }
+
+      // --- FORM SCRIPT: Send WhatsApp Message ---
+      function sendToWhatsApp() {
+        triggerFlash();
+        const name = bkName.value.trim() || "Organizador(a)";
+        const city = bkCity.value.trim() || "sua região";
+        const date = bkDate.value.trim() || "data a definir";
+        const type = bkType.value;
+        const text = `Salve, Giovanni! Vim pelo site do SkiloFrenikhz. Sou ${name} de ${city} e gostaria de cotar o projeto para um ${type} em ${date}. Vamos trocar ideia?`;
+        const phone = "554388548143";
+        const url = `https://api.whatsapp.com/send?phone=${phone}&text=${encodeURIComponent(text)}`;
+        window.open(url, "_blank");
+      }
+
+      // ─── BOOT SCREEN ───
+      (function () {
+        const lines = [
+          "> INICIALIZANDO SISTEMA...",
+          "> CARREGANDO PSY_TECHNO.EXE",
+          "> FREQUÊNCIA: 140+ BPM — OK",
+          "> BASSLINE CORE: CONECTADO",
+          "> SOMMA BOOKING (014): ONLINE",
+          "> SKILOFRENIKHZ.WAV — PRONTO.",
+        ];
+        const screen = document.getElementById("bootScreen");
+        const linesEl = document.getElementById("bootLines");
+        const bar = document.getElementById("bootBar");
+        const pct = document.getElementById("bootPct");
+        if (!screen) return;
+        let i = 0;
+        const tick = () => {
+          if (i < lines.length) {
+            const d = document.createElement("div");
+            d.textContent = lines[i];
+            d.style.cssText = "opacity:0;transition:opacity 0.18s";
+            linesEl.appendChild(d);
+            requestAnimationFrame(() => (d.style.opacity = "1"));
+            const p = Math.round(((i + 1) / lines.length) * 100);
+            bar.style.width = p + "%";
+            pct.textContent = p + "%";
+            i++;
+            setTimeout(tick, 240);
+          } else {
+            setTimeout(() => {
+              screen.style.opacity = "0";
+              setTimeout(() => screen.remove(), 520);
+            }, 280);
+          }
+        };
+        setTimeout(tick, 80);
+      })();
+
+      // ─── SCROLL PROGRESS BAR ───
+      const scrollProg = document.getElementById("scrollProgress");
+      window.addEventListener(
+        "scroll",
+        () => {
+          const pct =
+            (window.scrollY /
+              (document.documentElement.scrollHeight - window.innerHeight)) *
+            100;
+          if (scrollProg) scrollProg.style.width = pct + "%";
+        },
+        { passive: true },
+      );
+
+      // ─── CUSTOM CURSOR (só sobre a persona) ───
+      const cur = document.getElementById("customCursor");
+      const mascotZone = document.getElementById("mascotWrapper");
+
+      if (cur && mascotZone) {
+        mascotZone.addEventListener("mousemove", (e) => {
+          cur.style.left = e.clientX + "px";
+          cur.style.top  = e.clientY + "px";
+        });
+        mascotZone.addEventListener("mouseenter", () => {
+          cur.classList.add("visible");
+        });
+        mascotZone.addEventListener("mouseleave", () => {
+          cur.classList.remove("visible", "hovering");
+        });
+        const imgEl = document.getElementById("mascotImg");
+        if (imgEl) {
+          imgEl.addEventListener("mouseenter", () => cur.classList.add("hovering"));
+          imgEl.addEventListener("mouseleave", () => cur.classList.remove("hovering"));
+        }
+      }
+
+      // ─── SCROLL REVEAL ───
+      const revealTargets = document.querySelectorAll(
+        "#manifesto .border-4, .card-arsenal, #gigs h2, #galeria h2, #rider h2, #presskit h2, #tracks h2",
+      );
+      revealTargets.forEach((el, i) => {
+        el.classList.add("reveal-hidden");
+        el.style.transitionDelay = (i % 4) * 0.08 + "s";
+      });
+      const revealObs = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.replace("reveal-hidden", "reveal-visible");
+              revealObs.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" },
+      );
+      revealTargets.forEach((el) => revealObs.observe(el));
+
+      // ─── AURA FUNCTION ───
+      function triggerAura() {
+        ["auraRing1", "auraRing2", "auraRing3"].forEach((id, i) => {
+          const el = document.getElementById(id);
+          if (!el) return;
+          el.classList.remove("fire");
+          void el.offsetWidth;
+          setTimeout(() => el.classList.add("fire"), i * 140);
+        });
+        const wav = document.getElementById("energyWav");
+        if (wav) {
+          wav.classList.remove("fire");
+          void wav.offsetWidth;
+          wav.classList.add("fire");
+        }
+      }
+
+      // ─── GENRE SLOT CYCLING ───
+      const genreSlotEl = document.getElementById("genreSlot");
+      if (genreSlotEl) {
+        const itemH = 36; // h-9 = 36px
+        const totalItems = genreSlotEl.children.length - 1; // last is duplicate
+        let gi = 0;
+        setInterval(() => {
+          gi++;
+          if (gi >= totalItems) {
+            // snap back sem transição
+            genreSlotEl.style.transition = "none";
+            genreSlotEl.style.transform = "translateY(0px)";
+            gi = 0;
+            setTimeout(() => {
+              genreSlotEl.style.transition =
+                "transform 0.45s cubic-bezier(0.87, 0, 0.13, 1)";
+            }, 50);
+          } else {
+            genreSlotEl.style.transform = `translateY(-${gi * itemH}px)`;
+          }
+        }, 2200);
+      }
+
+      // ─── MASCOT QUOTES ───
+      const mascotQuotes = [
+        "💬 '140 BPM É POUCO, AUMENTA ESSE ACID!'",
+        "⚡ 'FONES PRESOS, OLHOS ARREGALADOS NO TECHNO.'",
+        "🔥 'SEM FREIO NA CURVA DA CONTRACULTURA!'",
+        "💀 'BASSLINE NO TALO ATÉ O AMANHECER.'",
+        "🎧 'QUEM TA OUVINDO ESSA GRAVE ESTOURADA?!'",
+        "⚡ 'PSY TECHNO NO SANGUE. BOUNCE NA ALMA.'",
+        "🔊 'A PISTA É UM TERRITÓRIO DE TRANSE!'",
+      ];
+
+      // ─── BPM STATE ───
+      let baseBPM = 140;
+
+      function triggerMascotClickEffect() {
+        triggerFlash();
+        playGlitchSound();
+        triggerAura();
+
+        const boost = Math.floor(Math.random() * 8 + 4);
+        baseBPM = Math.min(baseBPM + boost, 200);
+
+        const bpmEl = document.getElementById("bpm-display");
+        if (bpmEl) bpmEl.innerText = baseBPM;
+
+        const badge = document.getElementById("mascotBadge");
+        if (badge) badge.innerText = `${baseBPM} BPM // CYBER SQUIRREL`;
+
+        const quote =
+          mascotQuotes[Math.floor(Math.random() * mascotQuotes.length)];
+        const quoteEl = document.getElementById("mascotQuoteText");
+        const bubble = document.getElementById("speechBubble");
+        if (quoteEl) quoteEl.innerText = quote;
+        if (bubble) {
+          bubble.innerText = quote;
+          bubble.style.opacity = "1";
+          bubble.style.transform = "translateX(-50%) translateY(0px)";
+        }
+
+        const card = document.getElementById("mascotCard");
+        const statusEl = document.getElementById("mascotStatus");
+        const wrapper = document.getElementById("mascotWrapper");
+
+        if (card) {
+          const tilt = (Math.random() - 0.5) * 6;
+          card.style.transform = `perspective(1000px) scale(1.06) rotate(${tilt}deg)`;
+          card.style.borderColor =
+            baseBPM >= 180 ? "var(--bloodshed-red)" : "var(--chrome-white)";
+          card.style.boxShadow =
+            baseBPM >= 180
+              ? "12px 12px 0px var(--bloodshed-red)"
+              : "12px 12px 0px #5CE1E6";
+        }
+        if (statusEl) {
+          statusEl.innerText = "PEAK ENERGY!";
+          statusEl.style.color = "var(--bloodshed-red)";
+        }
+        if (wrapper) wrapper.classList.add("clicked");
+
+        if (baseBPM >= 200) {
+          setTimeout(
+            () =>
+              openModal(
+                "⚠ SOBRECARGA TOTAL! 200 BPM ATINGIDO. SISTEMA COLAPSANDO...",
+              ),
+            200,
+          );
+          baseBPM = 140;
+        }
+
+        setTimeout(() => {
+          if (card) {
+            card.style.transform =
+              "perspective(1000px) rotateX(0deg) rotateY(0deg)";
+            card.style.borderColor = "var(--chrome-white)";
+            card.style.boxShadow = "12px 12px 0px #5CE1E6";
+          }
+          if (statusEl) {
+            statusEl.innerText = "ONLINE";
+            statusEl.style.color = "var(--toxic-volt)";
+          }
+          if (bubble) {
+            bubble.style.opacity = "0";
+            bubble.style.transform = "translateX(-50%) translateY(10px)";
+          }
+          if (wrapper) wrapper.classList.remove("clicked");
+        }, 1500);
+      }
+
+      // ─── BPM FLUCTUATION ───
+      const bpmDisplayEl = document.getElementById("bpm-display");
+      if (bpmDisplayEl) {
+        setInterval(() => {
+          const statusEl = document.getElementById("mascotStatus");
+          if (statusEl && statusEl.innerText === "PEAK ENERGY!") return;
+          const fluctuation = Math.floor(Math.random() * 5) - 2;
+          bpmDisplayEl.innerText = Math.max(138, baseBPM + fluctuation);
+        }, 1000);
+      }
+
+      // ─── 3D TILT PARALLAX ───
+      const mascotWrapper = document.getElementById("mascotWrapper");
+      const mascotCardEl = document.getElementById("mascotCard");
+      const mascotBadgeEl = document.getElementById("mascotBadge");
+      const mascotImgEl = document.getElementById("mascotImg");
+      const coordDisplay = document.getElementById("coordDisplay");
+
+      function handleMascotMove(e) {
+        if (!mascotWrapper || !mascotCardEl) return;
+        const rect = mascotWrapper.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        const cx = rect.width / 2;
+        const cy = rect.height / 2;
+        const rotX = ((y - cy) / cy) * -14;
+        const rotY = ((x - cx) / cx) * 14;
+
+        mascotCardEl.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-6px)`;
+        mascotCardEl.style.boxShadow = `${-rotY * 0.9}px ${rotX * 0.9 + 14}px 0px var(--frenzy-gold)`;
+        if (mascotBadgeEl)
+          mascotBadgeEl.style.transform = `translate(${rotY * 0.5}px, ${rotX * 0.5}px) rotate(6deg)`;
+        if (mascotImgEl)
+          mascotImgEl.style.transform = `scale(1.06) translate(${rotY * 0.2}px, ${rotX * 0.2}px)`;
+        if (coordDisplay)
+          coordDisplay.innerText = `X:${Math.round(x)} Y:${Math.round(y)}`;
+
+        const statusEl = document.getElementById("mascotStatus");
+        if (statusEl && statusEl.innerText !== "PEAK ENERGY!") {
+          statusEl.innerText = "TRACKING";
+          statusEl.style.color = "var(--frenzy-gold)";
+        }
+      }
+
+      function handleTouchMove(e) {
+        if (!e.touches.length || !mascotWrapper || !mascotCardEl) return;
+        const touch = e.touches[0];
+        const rect = mascotWrapper.getBoundingClientRect();
+        const x = touch.clientX - rect.left;
+        const y = touch.clientY - rect.top;
+        const cx = rect.width / 2;
+        const cy = rect.height / 2;
+        const rotX = ((y - cy) / cy) * -10;
+        const rotY = ((x - cx) / cx) * 10;
+        mascotCardEl.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+        if (coordDisplay)
+          coordDisplay.innerText = `X:${Math.round(x)} Y:${Math.round(y)}`;
+      }
+
+      function resetMascotMove() {
+        if (!mascotCardEl) return;
+        mascotCardEl.style.transform =
+          "perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0px)";
+        mascotCardEl.style.boxShadow = "12px 12px 0px #5CE1E6";
+        if (mascotBadgeEl)
+          mascotBadgeEl.style.transform = "translate(0px, 0px) rotate(6deg)";
+        if (mascotImgEl)
+          mascotImgEl.style.transform = "scale(1) translate(0px, 0px)";
+        if (coordDisplay) coordDisplay.innerText = "X:0 Y:0";
+        const statusEl = document.getElementById("mascotStatus");
+        if (statusEl && statusEl.innerText === "TRACKING") {
+          statusEl.innerText = "ONLINE";
+          statusEl.style.color = "var(--toxic-volt)";
+        }
+      }
+    </script>
+  </body>
+</html>
